@@ -1,0 +1,821 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow" data-publish>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Цветотип и цвет волос – MaxStyle</title>
+<meta name="description" content="Как определить свой цветотип: Весна, Лето, Осень или Зима, 12 подтипов. Какой цвет волос, техники окрашивания и металлы идут каждому подтипу. Примерка цвета на своём фото.">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:site_name" content="MaxStyle">
+<meta property="og:title" content="Цветотип и цвет волос, который вам идёт">
+<meta property="og:description" content="4 сезона, 12 подтипов, оттенки и техники окрашивания для каждого. Определите свой за три шага.">
+<meta property="og:url" content="https://max19761007.github.io/maxstyle-site/cvetotip.html">
+<meta property="og:image" content="https://max19761007.github.io/maxstyle-site/assets/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Forum&family=Golos+Text:wght@400;600&display=swap" rel="stylesheet">
+<link rel="icon" href="assets/maxstyle-mark.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/maxstyle-mark-180.png">
+<link rel="stylesheet" href="assets/brand.css">
+<link rel="stylesheet" href="vibe.css">
+<style>
+  /* ---- тема: цвета интерфейса только из бренда MaxStyle (assets/brand.css) ----
+     Исключение – цвета-образцы (пряди, ткани): это содержание справочника, они заданы в данных ниже. */
+  .v-page {
+    --v-canvas: var(--stone); --v-surface: var(--stone-raised);
+    --v-ink: var(--graphite); --v-ink-soft: var(--steel);
+    --v-accent: var(--oxblood); --v-accent-ink: var(--on-oxblood);
+    --v-font-display: "Forum", "Times New Roman", serif;
+    --v-font-text: "Golos Text", "Segoe UI", system-ui, sans-serif;
+    --v-e1: 0 0 0 1px var(--line); --v-e2: 0 0 0 1px var(--line);
+    --v-radius: var(--radius-sm);
+    --v-track-tight: -0.005em;
+    --v-t-xs: clamp(0.8125rem, 0.79rem + 0.15vw, 0.85rem);
+    --v-t-sm: clamp(0.9375rem, 0.9rem + 0.2vw, 1rem);
+    --bar-bg: color-mix(in oklab, var(--stone) 90%, transparent);
+  }
+  html, body { background: var(--stone); }
+  html { scroll-padding-top: 5.5rem; }
+  .v-page .v-display { font-weight: 400; line-height: 1.04; }
+  .v-page h3, .v-page h4 { font-weight: 400; margin: 0; }
+  .v-page .v-label { text-transform: none; letter-spacing: 0; font-size: var(--v-t-sm); color: var(--v-ink-soft); }
+  .v-page .v-btn { border-radius: var(--radius-sm); box-shadow: none; font-size: var(--v-t-base); font-weight: 600; padding: .9em 1.5em; }
+  .v-page .v-btn:hover { box-shadow: none; background: color-mix(in oklab, var(--oxblood) 88%, black); }
+  .v-page a:focus-visible, .v-page button:focus-visible, .v-page label:focus-within { outline: none; box-shadow: var(--focus-ring); }
+  .v-page p { text-wrap: pretty; }
+  .muted { color: var(--steel); }
+
+  /* ---- шапка ---------------------------------------------------------------- */
+  .bar { position: fixed; inset: 0 0 auto 0; z-index: 30; display: flex; align-items: center; justify-content: space-between; gap: var(--v-5);
+    padding: var(--v-3) var(--v-gutter); background: var(--bar-bg); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); box-shadow: 0 1px 0 var(--line); }
+  .bar__mark { display: inline-flex; align-items: center; gap: .55rem; min-height: 44px; text-decoration: none; color: var(--graphite);
+    font-family: var(--v-font-display); font-size: 1.6rem; letter-spacing: .02em; line-height: 1; }
+  .bar__mark img { width: 30px; height: 30px; }
+  .nav { display: flex; gap: var(--v-1); }
+  .nav a { position: relative; display: inline-flex; align-items: center; min-height: 44px; padding: 0 var(--v-3); text-decoration: none; color: var(--steel); font-size: var(--v-t-sm); }
+  .nav a::after { content: ""; position: absolute; left: var(--v-3); right: var(--v-3); bottom: 8px; height: 1px; background: var(--brass); transform: scaleX(0); transform-origin: left; transition: transform .28s var(--v-ease-out); }
+  .nav a.is-on { color: var(--graphite); }
+  .nav a.is-on::after { transform: scaleX(1); }
+  @media (hover: hover) and (pointer: fine) { .nav a:hover { color: var(--graphite); } }
+  @media (max-width: 960px) { .nav { display: none; } }
+  @media (max-width: 860px) { .bar .v-btn { display: none; } .bar { padding-block: var(--v-2); } .bar__mark { font-size: 1.4rem; } }
+  .dock { display: none; }
+  @media (max-width: 860px) {
+    .dock { position: fixed; z-index: 30; left: 0; right: 0; bottom: 0; display: grid; grid-template-columns: 1fr auto; gap: var(--v-3); align-items: center;
+      padding: var(--v-2) var(--v-gutter) calc(var(--v-2) + env(safe-area-inset-bottom)); background: var(--bar-bg); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); box-shadow: 0 -1px 0 var(--line); }
+    .dock .v-btn { justify-content: center; }
+    .dock__tel { display: inline-flex; align-items: center; min-height: 48px; padding: 0 var(--v-4); color: var(--graphite); font-weight: 600; text-decoration: none; box-shadow: inset 0 0 0 1px var(--line); border-radius: var(--radius-sm); }
+    .v-page { padding-bottom: 4.5rem; }
+  }
+
+  /* ---- акт 1 · hero: кольцо образцов прядей, как у колориста -------------------- */
+  .hero { padding: clamp(7rem, 16vh, 10rem) 0 var(--v-8); }
+  .hero__grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--v-8); align-items: end; }
+  .hero h1 { font-size: clamp(2.5rem, 1.4rem + 3.2vw, 4.4rem); line-height: 1; max-width: 13ch; }
+  .hero .v-lede { margin-top: var(--v-5); max-width: 40ch; color: var(--graphite); }
+  .hero__cta { display: flex; flex-wrap: wrap; align-items: center; gap: var(--v-3) var(--v-6); margin-top: var(--v-6); }
+  .textlink { color: var(--graphite); font-weight: 600; text-decoration: underline; text-decoration-color: var(--brass); text-underline-offset: .22em; display: inline-flex; align-items: center; min-height: 44px; }
+
+  .ring { position: relative; padding-top: 1.1rem; }
+  .ring__bar { position: absolute; top: 0; left: 2%; right: 2%; height: .55rem; border-radius: var(--radius-round); box-shadow: inset 0 0 0 1px var(--brass); background: color-mix(in oklab, var(--brass) 18%, transparent); }
+  .ring__groups { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--v-4); }
+  .ring__group { display: grid; gap: var(--v-3); text-decoration: none; color: var(--graphite); border: 0; background: none; padding: 0; cursor: pointer; font: inherit; text-align: left; }
+  .ring__strands { display: flex; gap: 5px; height: clamp(15rem, 34vh, 22rem); }
+  .strand { flex: 1; position: relative; border-radius: 0 0 40% 40% / 0 0 12% 12%; background: var(--c);
+    transform-origin: top center; transform: rotate(calc(var(--tilt, 0) * 1deg));
+    transition: transform .5s var(--v-ease-out); }
+  /* фактура волос: тонкие продольные блики и тень у корня */
+  .strand::before { content: ""; position: absolute; inset: 0; border-radius: inherit;
+    background: repeating-linear-gradient(90deg, rgb(255 255 255 / .09) 0 1px, transparent 1px 3px, rgb(0 0 0 / .07) 3px 4px, transparent 4px 6px),
+      linear-gradient(to bottom, rgb(0 0 0 / .22), transparent 18%, transparent 70%, rgb(255 255 255 / .12)); }
+  .strand::after { content: ""; position: absolute; left: 50%; top: -1.1rem; width: 5px; height: 1.3rem; margin-left: -2.5px; background: var(--brass); border-radius: 2px; }
+  .ring__name { font-family: var(--v-font-display); font-size: var(--v-t-lg); line-height: 1; }
+  .ring__hint { font-size: var(--v-t-xs); color: var(--steel); }
+  @media (hover: hover) and (pointer: fine) {
+    .ring__group:hover .strand:nth-child(1) { --tilt: -3; }
+    .ring__group:hover .strand:nth-child(3) { --tilt: 3; }
+  }
+  /* единственный «загрузочный» момент страницы: пряди раскрываются веером */
+  @media (prefers-reduced-motion: no-preference) {
+    .strand { animation: fan .9s var(--v-ease-out) both; animation-delay: calc(var(--i) * 45ms + 150ms); }
+    @keyframes fan { from { transform: rotate(0deg) scaleY(.2); opacity: 0; } to { opacity: 1; } }
+  }
+  @media (max-width: 860px) {
+    .hero { padding-top: 5.5rem; }
+    .hero__grid { grid-template-columns: 1fr; gap: var(--v-7); }
+    .hero h1 { font-size: clamp(2.1rem, 1.5rem + 3vw, 2.6rem); }
+    .ring__strands { height: 11rem; gap: 3px; }
+    .ring__groups { gap: var(--v-3); }
+    .ring__name { font-size: var(--v-t-base); }
+    .ring__hint { display: none; }
+  }
+
+  /* ---- акт 2 · как определить: шаги и мини-тест -------------------------------- */
+  .how { display: grid; grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); gap: var(--v-9); align-items: start; }
+  .how__head { display: grid; gap: var(--v-4); position: sticky; top: 6rem; }
+  .steps { counter-reset: s; display: grid; margin: var(--v-4) 0 0; padding: 0; list-style: none; }
+  .steps li { counter-increment: s; display: grid; grid-template-columns: 2.4rem 1fr; gap: var(--v-3); padding: var(--v-4) 0; border-top: 1px solid var(--line); }
+  .steps li:last-child { border-bottom: 1px solid var(--line); }
+  .steps li::before { content: counter(s); width: 2rem; height: 2rem; display: grid; place-items: center; border-radius: var(--radius-round); box-shadow: inset 0 0 0 1px var(--brass); font-size: var(--v-t-sm); font-variant-numeric: tabular-nums; }
+  .steps b { display: block; font-weight: 600; }
+  .steps span { color: var(--steel); font-size: var(--v-t-sm); }
+  .quiz { background: var(--stone-raised); box-shadow: inset 0 0 0 1px var(--line); padding: var(--v-6); display: grid; gap: var(--v-5); }
+  .quiz h3 { font-family: var(--v-font-display); font-size: var(--v-t-xl); line-height: 1.1; }
+  .q { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: var(--v-3) var(--v-5); align-items: center; padding-top: var(--v-4); border-top: 1px solid var(--line); }
+  .q__name { font-weight: 600; }
+  .q__opts { display: grid; grid-template-columns: 1fr 1fr; gap: var(--v-2); }
+  .opt { min-height: 48px; padding: .55em .8em; border-radius: var(--radius-sm); box-shadow: inset 0 0 0 1px var(--line); background: var(--stone); text-align: left; font-size: var(--v-t-sm); line-height: 1.3; color: var(--graphite);
+    transition: box-shadow .16s var(--v-ease-out), background-color .16s var(--v-ease-out); }
+  .opt small { display: block; font-size: var(--v-t-xs); color: var(--steel); }
+  .opt[aria-pressed="true"] { background: var(--oxblood); color: var(--on-oxblood); box-shadow: none; }
+  .opt[aria-pressed="true"] small { color: color-mix(in oklab, var(--on-oxblood) 75%, transparent); }
+  @media (hover: hover) and (pointer: fine) { .opt:hover { box-shadow: inset 0 0 0 1px var(--brass); } }
+  .result { padding: var(--v-5); box-shadow: inset 0 0 0 1px var(--brass); display: grid; gap: var(--v-3); }
+  .result__title { font-family: var(--v-font-display); font-size: var(--v-t-2xl); line-height: 1; }
+  .result__row { display: flex; flex-wrap: wrap; gap: var(--v-3) var(--v-5); align-items: center; }
+  .result .v-btn[hidden] { display: none; }
+  .signs { width: 100%; border-collapse: collapse; font-size: var(--v-t-sm); margin-top: var(--v-2); }
+  @media (max-width: 960px) {
+    .how { grid-template-columns: 1fr; gap: var(--v-7); }
+    .how__head { position: static; }
+  }
+  @media (max-width: 600px) {
+    .quiz { padding: var(--v-5) var(--v-4); }
+    .q { grid-template-columns: 1fr; gap: var(--v-2); }
+  }
+
+  /* ---- акт 2б · лица сезонов: портрет сезона рядом с вашим фото, рекомендации ---- */
+  .ftabs { display: flex; flex-wrap: wrap; gap: var(--v-2); }
+  .ftab { display: inline-flex; align-items: center; gap: var(--v-3); min-height: 56px; padding: .35rem 1.1rem .35rem .35rem; border-radius: var(--radius-sm); background: var(--stone-raised); box-shadow: inset 0 0 0 1px var(--line); color: var(--graphite); font-size: var(--v-t-base); }
+  .ftab img { width: 2.8rem; height: 2.8rem; border-radius: var(--radius-round); object-fit: cover; object-position: 50% 28%; }
+  .ftab[aria-selected="true"] { background: var(--graphite); color: var(--stone); box-shadow: none; }
+  @media (hover: hover) and (pointer: fine) { .ftab:hover { box-shadow: inset 0 0 0 1px var(--brass); } }
+  .faces { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr); gap: var(--v-8); align-items: start; margin-top: var(--v-6); }
+  .compare { position: sticky; top: 6rem; }
+  .compare__pair { display: grid; grid-template-columns: 1fr 1fr; gap: var(--v-3); }
+  .cmp { position: relative; aspect-ratio: 3 / 4; overflow: hidden; background: var(--stone-raised); }
+  .cmp > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 30%; }
+  .cmp__cap { display: flex; justify-content: space-between; align-items: center; gap: var(--v-3); margin-top: var(--v-2); font-size: var(--v-t-xs); color: var(--steel); min-height: 32px; }
+  .drop { position: absolute; inset: 0; display: grid; place-content: center; gap: var(--v-2); padding: var(--v-4); text-align: center; cursor: pointer; color: var(--graphite);
+    border: 1px dashed var(--brass); font-size: var(--v-t-sm); line-height: 1.35; }
+  .drop b { font-family: var(--v-font-display); font-weight: 400; font-size: var(--v-t-lg); }
+  .drop span { color: var(--steel); font-size: var(--v-t-xs); }
+  .drop input, .re input { position: absolute; width: 1px; height: 1px; opacity: 0; }
+  .cmp.has-photo .drop { display: none; }
+  #meBox:not(.has-photo) .cloth { display: none; }
+  .re { display: none; }
+  .has-photo + .cmp__cap .re { display: inline-flex; align-items: center; min-height: 32px; color: var(--graphite); text-decoration: underline; text-decoration-color: var(--brass); text-underline-offset: .2em; cursor: pointer; }
+  .compare .cloth { height: 28%; }
+  .compare.is-on .cloth { --drape-off: 0%; }
+  .compare__try { margin-top: var(--v-5); }
+  .compare__try p { font-size: var(--v-t-sm); margin-bottom: var(--v-3); }
+  .dots { display: flex; flex-wrap: wrap; gap: var(--v-2); }
+  .dot { width: 2.75rem; height: 2.75rem; border-radius: var(--radius-round); background: var(--c); box-shadow: inset 0 0 0 1px rgb(0 0 0 / .12); }
+  .dot[aria-pressed="true"] { box-shadow: 0 0 0 2px var(--stone), 0 0 0 4px var(--oxblood); }
+  .dots__sep { width: 1px; align-self: stretch; background: var(--line); margin: 0 var(--v-2); }
+  .recs { display: grid; gap: var(--v-6); }
+  .recs__head h3 { font-family: var(--v-font-display); font-size: var(--v-t-3xl); line-height: 1; }
+  .recs__head p { margin-top: var(--v-3); font-size: var(--v-t-lg); line-height: 1.4; max-width: 34ch; }
+  .rec { padding-top: var(--v-5); border-top: 1px solid var(--line); display: grid; gap: var(--v-3); }
+  .rec h4 { font-family: var(--v-font-display); font-size: var(--v-t-xl); line-height: 1.1; }
+  .rec p, .rec li { font-size: var(--v-t-sm); }
+  .looks { display: grid; gap: var(--v-1); }
+  .looks li { display: grid; grid-template-columns: 9rem 1fr; gap: var(--v-3); }
+  .looks li span:first-child { color: var(--steel); }
+  .pal { display: flex; flex-wrap: wrap; gap: var(--v-2) var(--v-4); }
+  .pal li { display: inline-flex; align-items: center; gap: .5em; }
+  .pal i { width: 1.2rem; height: 1.2rem; border-radius: var(--radius-round); background: var(--c); box-shadow: inset 0 0 0 1px rgb(0 0 0 / .12); }
+  .pal--bad li { color: var(--steel); text-decoration: line-through; text-decoration-color: color-mix(in oklab, var(--steel) 60%, transparent); }
+  .rec .chips { grid-template-columns: repeat(auto-fill, minmax(9.5rem, 1fr)); }
+  @media (max-width: 960px) {
+    .faces { grid-template-columns: 1fr; gap: var(--v-6); }
+    /* на телефоне пара фото закреплена сверху, рекомендации листаются под ней */
+    .compare { top: 4.2rem; z-index: 5; background: var(--v-canvas); padding-bottom: var(--v-3); }
+    .compare__pair { width: min(100%, calc(34svh * 1.5 + .75rem)); }
+    .compare__try { margin-top: var(--v-3); }
+    .compare__try p { display: none; }
+    .dot { width: 2.4rem; height: 2.4rem; }
+    .ftab { padding-right: .8rem; font-size: var(--v-t-sm); }
+    .ftab img { width: 2.2rem; height: 2.2rem; }
+    .looks li { grid-template-columns: 1fr; gap: 0; }
+  }
+
+  /* ---- акт 3 · сезоны: вкладки, подтипы, цвет волос ----------------------------- */
+  .seasons__head { display: grid; gap: var(--v-3); max-width: 50rem; margin-bottom: var(--v-6); }
+  .tabs { display: flex; flex-wrap: wrap; gap: var(--v-2); }
+  .tab { min-height: 48px; padding: 0 1.3em; border-radius: var(--radius-sm); box-shadow: inset 0 0 0 1px var(--line); background: var(--stone-raised); font-family: var(--v-font-display); font-size: var(--v-t-lg); color: var(--graphite); }
+  .tab[aria-selected="true"] { background: var(--graphite); color: var(--stone); box-shadow: none; }
+  @media (hover: hover) and (pointer: fine) { .tab:hover { box-shadow: inset 0 0 0 1px var(--brass); } }
+  .panel { margin-top: var(--v-6); }
+  .panel__top { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--v-7); align-items: start; padding-bottom: var(--v-7); border-bottom: 1px solid var(--line); }
+  .panel__title { font-family: var(--v-font-display); font-size: var(--v-t-3xl); line-height: 1; }
+  .panel__lead { margin-top: var(--v-4); font-size: var(--v-t-lg); line-height: 1.4; max-width: 34ch; }
+  .panel__strands { display: flex; gap: 5px; width: min(12rem, 60%); height: 11rem; margin-top: var(--v-6); padding-top: 1.1rem; border-top: .55rem solid color-mix(in oklab, var(--brass) 18%, transparent); }
+  .panel__strands .strand { animation: none; }
+  @media (max-width: 960px) { .panel__strands { display: none; } }
+  .dl { display: grid; margin: 0; }
+  .dl div { display: grid; grid-template-columns: 8.5rem 1fr; gap: var(--v-4); padding: var(--v-3) 0; border-top: 1px solid var(--line); }
+  .dl div:last-child { border-bottom: 1px solid var(--line); }
+  .dl dt { color: var(--steel); font-size: var(--v-t-sm); }
+  .dl dd { margin: 0; }
+  .dye { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--v-6); padding: var(--v-7) 0; border-bottom: 1px solid var(--line); }
+  .dye h4 { font-family: var(--v-font-display); font-size: var(--v-t-lg); margin-bottom: var(--v-2); }
+  .dye p { color: var(--steel); font-size: var(--v-t-sm); }
+  .dye__tech { grid-column: 1 / -1; padding: var(--v-4) var(--v-5); background: var(--stone-raised); box-shadow: inset 0 0 0 1px var(--line); }
+  .dye__tech p { color: var(--graphite); font-size: var(--v-t-base); }
+
+  .subs { padding-top: var(--v-7); }
+  .subs__bar { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: var(--v-3) var(--v-6); margin-bottom: var(--v-5); }
+  .subs__bar h3 { font-family: var(--v-font-display); font-size: var(--v-t-xl); }
+  .subtabs { display: flex; flex-wrap: wrap; gap: var(--v-1); }
+  .subtab { min-height: 44px; padding: 0 1em; color: var(--steel); font-size: var(--v-t-sm); position: relative; }
+  .subtab::after { content: ""; position: absolute; left: 1em; right: 1em; bottom: 6px; height: 1px; background: var(--brass); transform: scaleX(0); transform-origin: left; transition: transform .28s var(--v-ease-out); }
+  .subtab[aria-selected="true"] { color: var(--graphite); }
+  .subtab[aria-selected="true"]::after { transform: scaleX(1); }
+  .sub { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: var(--v-8); align-items: start; }
+  .sub__name { font-family: var(--v-font-display); font-size: var(--v-t-2xl); line-height: 1.02; }
+  .sub__feature { margin-top: var(--v-3); font-size: var(--v-t-lg); line-height: 1.4; }
+  .sub .dl { margin-top: var(--v-5); }
+  .hair h4 { font-family: var(--v-font-display); font-size: var(--v-t-lg); margin-bottom: var(--v-4); }
+  .chips { display: grid; grid-template-columns: repeat(auto-fill, minmax(10.5rem, 1fr)); gap: var(--v-2); }
+  .chip { display: grid; grid-template-columns: 2.4rem 1fr; gap: var(--v-3); align-items: center; padding: var(--v-2); background: var(--stone-raised); box-shadow: inset 0 0 0 1px var(--line); font-size: var(--v-t-sm); line-height: 1.25; }
+  .chip i { height: 2.4rem; border-radius: 0 0 40% 40% / 0 0 18% 18%; background: var(--c); position: relative; overflow: hidden; }
+  .chip i::before { content: ""; position: absolute; inset: 0; background: repeating-linear-gradient(90deg, rgb(255 255 255 / .1) 0 1px, transparent 1px 3px, rgb(0 0 0 / .08) 3px 4px, transparent 4px 6px), linear-gradient(to bottom, rgb(0 0 0 / .2), transparent 30%); }
+  .hair__more { margin-top: var(--v-5); display: grid; }
+  .hair__more div { display: grid; grid-template-columns: 7.5rem 1fr; gap: var(--v-4); padding: var(--v-3) 0; border-top: 1px solid var(--line); font-size: var(--v-t-sm); }
+  .hair__more div:last-child { border-bottom: 1px solid var(--line); }
+  .hair__more dt { color: var(--steel); }
+  .hair__more dd { margin: 0; }
+  .note { margin-top: var(--v-4); font-size: var(--v-t-xs); color: var(--steel); max-width: 60ch; }
+  @media (max-width: 960px) {
+    .panel__top, .sub { grid-template-columns: 1fr; gap: var(--v-6); }
+    .dye { grid-template-columns: 1fr; gap: var(--v-5); }
+  }
+  @media (max-width: 600px) {
+    .tab { flex: 1 1 40%; font-size: var(--v-t-base); }
+    .dl div, .hair__more div { grid-template-columns: 1fr; gap: var(--v-1); }
+    .chips { grid-template-columns: 1fr 1fr; }
+  }
+
+  /* ---- акт 4 · примерка: ткань под подбородком ---------------------------------- */
+  .try { display: grid; grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); gap: var(--v-9); align-items: start; }
+  .mirror { position: sticky; top: 6rem; }
+  .mirror__frame { position: relative; aspect-ratio: 3 / 4; overflow: hidden; background: var(--stone-raised); }
+  .mirror__frame img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 30%; }
+  .mirror__frame::after { content: ""; position: absolute; inset: var(--v-3); box-shadow: inset 0 0 0 1px color-mix(in oklab, var(--brass) 70%, transparent); pointer-events: none; z-index: 3; }
+  /* ткань: вырез под шеей, складки поверх цвета; поднимается снизу при выборе цвета */
+  .cloth { position: absolute; left: 0; right: 0; bottom: 0; height: var(--drape-h, 28%); z-index: 2; color: var(--c, transparent);
+    transform: translateY(var(--drape-off, 100%)); transition: transform .45s var(--v-ease-out), color .3s var(--v-ease-out); }
+  .cloth svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+  .mirror.is-on .cloth { --drape-off: 0%; }
+  .mirror__cap { margin-top: var(--v-3); display: flex; justify-content: space-between; gap: var(--v-4); font-size: var(--v-t-xs); color: var(--steel); }
+  .try__panel { display: grid; gap: var(--v-6); }
+  .try__panel h3 { font-family: var(--v-font-display); font-size: var(--v-t-lg); margin-bottom: var(--v-3); }
+  .seg { display: flex; flex-wrap: wrap; gap: var(--v-2); }
+  .seg button { min-height: 44px; padding: 0 1.1em; border-radius: var(--radius-sm); box-shadow: inset 0 0 0 1px var(--line); background: var(--stone-raised); color: var(--graphite); font-size: var(--v-t-sm); }
+  .seg button[aria-pressed="true"] { background: var(--graphite); color: var(--stone); box-shadow: none; }
+  .swatches { display: grid; grid-template-columns: repeat(auto-fill, minmax(6.5rem, 1fr)); gap: var(--v-2); }
+  .sw { display: grid; gap: var(--v-2); padding: var(--v-2); text-align: left; background: var(--stone-raised); box-shadow: inset 0 0 0 1px var(--line); font-size: var(--v-t-xs); color: var(--graphite); }
+  .sw i { height: 3rem; background: var(--c); }
+  .sw[aria-pressed="true"] { box-shadow: inset 0 0 0 2px var(--oxblood); }
+  .own { display: flex; flex-wrap: wrap; gap: var(--v-3) var(--v-5); align-items: center; }
+  .own label { cursor: pointer; }
+  .own input { position: absolute; width: 1px; height: 1px; opacity: 0; }
+  .own .v-btn--ghost { box-shadow: inset 0 0 0 1px var(--graphite); border-radius: var(--radius-sm); }
+  .how-look { display: grid; gap: var(--v-2); padding: var(--v-4) var(--v-5); box-shadow: inset 0 0 0 1px var(--line); font-size: var(--v-t-sm); }
+  .how-look b { font-weight: 600; }
+  @media (max-width: 960px) {
+    .try { grid-template-columns: 1fr; gap: var(--v-6); }
+    /* на телефоне зеркало закреплено сверху: нажали цвет – сразу видно результат */
+    .mirror { top: 4.2rem; z-index: 5; background: var(--stone); padding-bottom: var(--v-3); }
+    .mirror__frame { width: min(100%, calc(42svh * .75)); margin-inline: auto; }
+  }
+
+  /* ---- акт 5 · запись (тёмная секция бренда) ------------------------------------- */
+  .cta { background: var(--panel); color: var(--on-panel); }
+  .cta__inner { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, .8fr); gap: var(--v-8); align-items: end; }
+  .cta h2 { max-width: 16ch; }
+  .cta p { margin-top: var(--v-4); max-width: 44ch; color: color-mix(in oklab, var(--on-panel) 80%, transparent); }
+  .cta__acts { display: grid; gap: var(--v-3); justify-items: start; }
+  .cta__tel { color: var(--on-panel); font-family: var(--v-font-display); font-size: var(--v-t-xl); text-decoration: none; min-height: 44px; display: inline-flex; align-items: center; }
+  .cta .textlink { color: var(--on-panel); }
+  .foot { display: flex; flex-wrap: wrap; justify-content: space-between; gap: var(--v-3) var(--v-6); padding: var(--v-6) 0 var(--v-7); font-size: var(--v-t-xs); color: var(--steel); }
+  .foot a { color: var(--steel); }
+  .foot__mark { font-family: var(--v-font-display); font-size: 1.2rem; color: var(--graphite); }
+  @media (max-width: 860px) { .cta__inner { grid-template-columns: 1fr; gap: var(--v-6); } }
+  /* движок сбрасывает фон у всех кнопок (.v-page button) – возвращаем фон нашим кнопкам */
+  .v-page .dot { background: var(--c); }
+  .v-page .ftab:not([aria-selected="true"]), .v-page .tab:not([aria-selected="true"]), .v-page .sw, .v-page .seg button:not([aria-pressed="true"]) { background: var(--stone-raised); }
+  .v-page .opt:not([aria-pressed="true"]) { background: var(--stone); }
+</style>
+</head>
+<body>
+<div class="v-page">
+  <span data-v-progress></span>
+
+  <header class="bar">
+    <a class="bar__mark" href="index.html"><img src="assets/maxstyle-mark.svg" alt="" width="30" height="30">MaxStyle</a>
+    <nav class="nav" aria-label="Разделы">
+      <a href="index.html">Главная</a>
+      <a href="#kak">Как определить</a>
+      <a href="#lica">Лица сезонов</a>
+      <a href="#sezony">Сезоны</a>
+      <a href="#primerka">Примерка</a>
+    </nav>
+    <a class="v-btn" href="https://widget.sonline.su/ru/services/?placeid=655344472" target="_blank" rel="noopener">Записаться онлайн</a>
+  </header>
+
+  <main>
+
+    <!-- 1 · Кольцо образцов прядей: по три оттенка на сезон -->
+    <section class="hero" data-v-act="flow" data-v-drift="#ECECE8" aria-label="Цветотип и цвет волос">
+      <div class="v-wrap hero__grid">
+        <div>
+          <h1 class="v-display">Цветотип и цвет волос, который вам идёт</h1>
+          <p class="v-lede">Четыре сезона, двенадцать подтипов. Определите свой за три шага и посмотрите, какие оттенки и техники окрашивания ему подходят.</p>
+          <div class="hero__cta">
+            <a class="v-btn" href="#kak">Определить цветотип</a>
+            <a class="textlink" href="#primerka">Примерить цвета</a>
+          </div>
+        </div>
+        <div class="ring" aria-label="Образцы оттенков по сезонам">
+          <span class="ring__bar" aria-hidden="true"></span>
+          <div class="ring__groups" id="ring"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2 · Как определить: три шага и тест по признакам из справочника -->
+    <section class="v-section v-section--tight" data-v-act="flow" data-v-drift="#F7F7F4" id="kak" aria-label="Как определить цветотип">
+      <div class="v-wrap how">
+        <div class="how__head">
+          <h2 class="v-display v-display--md">Как определить свой цветотип</h2>
+          <p class="muted">Нужен дневной свет, лицо без макияжа, чистые сухие волосы без лака и пенки – так видны натуральные цвета.</p>
+          <ol class="steps">
+            <li><div><b>Тёплый или холодный</b><span>Проверьте признаки в тесте. Тёплый – Весна или Осень, холодный – Лето или Зима.</span></div></li>
+            <li><div><b>Светлый или тёмный</b><span>Посмотрите на натуральный цвет волос. Светлые – Весна или Лето, тёмные – Осень или Зима.</span></div></li>
+            <li><div><b>Примерка</b><span>Приложите к лицу вещи тёплых, холодных и очень ярких цветов – или попробуйте примерку ниже.</span></div></li>
+          </ol>
+        </div>
+
+        <div class="quiz" id="quiz">
+          <h3>Тест: пять признаков и цвет волос</h3>
+          <div id="quizRows"></div>
+          <div class="result" aria-live="polite">
+            <span class="v-label" id="resLabel">Ответьте на все вопросы</span>
+            <span class="result__title" id="resTitle">Ваш сезон</span>
+            <p class="muted" id="resText">Выберите по одному варианту в каждой строке – результат появится здесь.</p>
+            <div class="result__row">
+              <a class="v-btn" id="resLink" href="#sezony" hidden>Смотреть сезон</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2б · Лица сезонов: сгенерированные портреты ярких представительниц (иллюстрации), ваше фото рядом, рекомендации -->
+    <section class="v-section" data-v-act="flow" data-v-drift="#ECECE8" id="lica" aria-label="Лица сезонов">
+      <div class="v-wrap">
+        <div class="seasons__head">
+          <h2 class="v-display v-display--lg">Лица сезонов</h2>
+          <p class="muted">Яркие представительницы каждого сезона в своих цветах. Загрузите своё фото и сравните: чей контраст, подтон и цвет глаз ближе к вашим.</p>
+        </div>
+        <div class="ftabs" role="tablist" aria-label="Сезон" id="faceTabs"></div>
+        <div class="faces">
+          <div class="compare" id="compare">
+            <div class="compare__pair">
+              <div>
+                <div class="cmp"><img id="repFace" src="assets/face-vesna.webp" alt="" width="900" height="1200" loading="lazy" decoding="async"><div class="cloth" aria-hidden="true"><svg viewBox="0 0 100 40" preserveAspectRatio="none"><path d="M0 6 Q18 1 34 4 Q43 14 50 14 Q57 14 66 4 Q82 1 100 6 L100 40 L0 40 Z" fill="currentColor"/><path d="M0 6 Q18 1 34 4 Q43 14 50 14 Q57 14 66 4 Q82 1 100 6 L100 40 L0 40 Z" fill="url(#folds)"/></svg></div></div>
+                <div class="cmp__cap"><span id="repCap">Иллюстрация</span></div>
+              </div>
+              <div>
+                <div class="cmp" id="meBox">
+                  <img id="meFace" alt="" hidden>
+                  <label class="drop"><b>Ваше фото</b>Портрет при дневном свете, без макияжа<span>Фото остаётся на вашем устройстве и никуда не отправляется</span><input type="file" accept="image/*" data-own></label>
+                  <div class="cloth" aria-hidden="true"><svg viewBox="0 0 100 40" preserveAspectRatio="none"><path d="M0 6 Q18 1 34 4 Q43 14 50 14 Q57 14 66 4 Q82 1 100 6 L100 40 L0 40 Z" fill="currentColor"/><path d="M0 6 Q18 1 34 4 Q43 14 50 14 Q57 14 66 4 Q82 1 100 6 L100 40 L0 40 Z" fill="url(#folds)"/></svg></div>
+                </div>
+                <div class="cmp__cap"><span>Вы</span><label class="re">Заменить фото<input type="file" accept="image/*" data-own></label></div>
+              </div>
+            </div>
+            <div class="compare__try">
+              <p class="muted">Приложите цвет к обоим портретам: свой цвет освежает лицо, чужой делает его уставшим. Слева от черты – цвета сезона, справа – чужие.</p>
+              <div class="dots" id="cmpDots" role="group" aria-label="Цвет ткани"></div>
+            </div>
+          </div>
+          <div class="recs" id="recs" role="tabpanel" aria-live="polite"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3 · Сезоны: вкладки с адресами (#vesna, #leto, #osen, #zima), подтипы, цвет волос -->
+    <section class="v-section" data-v-act="flow" data-v-drift="#ECECE8" id="sezony" aria-label="Сезоны и подтипы">
+      <div class="v-wrap">
+        <div class="seasons__head">
+          <h2 class="v-display v-display--lg">Сезоны и подтипы</h2>
+          <p class="muted">Внешность, одежда, металлы и главное для окрашивания – какие оттенки волос подходят и каких избегать.</p>
+        </div>
+        <div class="tabs" role="tablist" aria-label="Сезон" id="tabs"></div>
+        <div class="panel" id="panel" role="tabpanel"></div>
+      </div>
+    </section>
+
+    <!-- 4 · Примерка: ткань под подбородком, как на настоящей драпировке -->
+    <section class="v-section" data-v-act="flow" data-v-drift="#F7F7F4" id="primerka" aria-label="Примерка цвета">
+      <div class="v-wrap">
+        <div class="seasons__head">
+          <h2 class="v-display v-display--lg">Примерка цвета</h2>
+          <p class="muted">Так проверяют цветотип вживую: к лицу прикладывают ткань и смотрят, что происходит с кожей и глазами.</p>
+        </div>
+        <div class="try">
+          <div class="mirror" id="mirror">
+            <div class="mirror__frame">
+              <img id="face" src="assets/drape.webp" srcset="assets/drape-600.webp 600w, assets/drape.webp 900w" sizes="(max-width: 960px) 100vw, 32rem" alt="Портрет для примерки цвета" width="900" height="1200" loading="lazy" decoding="async">
+              <div class="cloth" aria-hidden="true">
+                <svg viewBox="0 0 100 40" preserveAspectRatio="none">
+                  <path d="M0 6 Q18 1 34 4 Q43 14 50 14 Q57 14 66 4 Q82 1 100 6 L100 40 L0 40 Z" fill="currentColor"/>
+                  <path d="M0 6 Q18 1 34 4 Q43 14 50 14 Q57 14 66 4 Q82 1 100 6 L100 40 L0 40 Z" fill="url(#folds)"/>
+                  <defs>
+                    <linearGradient id="folds" x1="0" x2="1" y1="0" y2="0">
+                      <stop offset="0" stop-color="#000" stop-opacity=".18"/>
+                      <stop offset=".18" stop-color="#fff" stop-opacity=".08"/>
+                      <stop offset=".32" stop-color="#000" stop-opacity=".1"/>
+                      <stop offset=".5" stop-color="#fff" stop-opacity=".06"/>
+                      <stop offset=".68" stop-color="#000" stop-opacity=".1"/>
+                      <stop offset=".82" stop-color="#fff" stop-opacity=".08"/>
+                      <stop offset="1" stop-color="#000" stop-opacity=".18"/>
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
+            </div>
+            <div class="mirror__cap"><span id="faceCap">Иллюстрация</span><span id="clothName"></span></div>
+          </div>
+
+          <div class="try__panel">
+            <div>
+              <h3>Сезон</h3>
+              <div class="seg" id="trySeason"></div>
+            </div>
+            <div>
+              <h3>Цвета сезона</h3>
+              <div class="swatches" id="swGood"></div>
+            </div>
+            <div>
+              <h3>Цвета, которых сезону лучше избегать</h3>
+              <div class="swatches" id="swBad"></div>
+            </div>
+            <div class="own">
+              <label class="v-btn v-btn--ghost">Примерить на своём фото<input type="file" accept="image/*" id="ownPhoto" data-own></label>
+              <span class="muted" style="font-size: var(--v-t-xs); max-width: 30ch;">Фото остаётся на вашем устройстве и никуда не отправляется.</span>
+            </div>
+            <div class="how-look">
+              <b>На что смотреть</b>
+              <span>Подходящий цвет выравнивает тон кожи и оживляет глаза. Чужой подчёркивает тени под глазами, покраснения, делает лицо серым или уставшим.</span>
+              <span class="muted">Образцы тканей примерные: цвет на экране зависит от настроек телефона.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5 · Запись -->
+    <section class="v-section cta" data-v-act="flow" aria-label="Консультация по цвету">
+      <div class="v-wrap cta__inner">
+        <div>
+          <h2 class="v-display v-display--lg">Точный оттенок подберём на консультации</h2>
+          <p>Перед окрашиванием смотрю кожу, глаза и натуральный цвет при дневном свете, договариваемся о результате, и цену я называю до начала работы.</p>
+        </div>
+        <div class="cta__acts">
+          <a class="v-btn" href="https://widget.sonline.su/ru/services/?placeid=655344472" target="_blank" rel="noopener">Записаться онлайн</a>
+          <a class="cta__tel" href="tel:+79257111211">+7 (925) 711-12-11</a>
+          <a class="textlink" href="index.html#ceny">Прайс на окрашивание</a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="v-wrap foot">
+      <span class="foot__mark">MaxStyle</span>
+      <span>Описание подтипов – по материалам статьи <a href="https://www.livemaster.ru/topic/3073865-blog-opisanie-tsvetotipov-vneshnosti-uznaj-kto-ty-vesna-leto-osen-ili-zima" target="_blank" rel="noopener">«Описание цветотипов внешности» на Ярмарке Мастеров</a> и практике колористики</span>
+      <span>© 2026 Максим Смоляков</span>
+    </footer>
+  </main>
+
+  <div class="dock">
+    <a class="v-btn" href="https://widget.sonline.su/ru/services/?placeid=655344472" target="_blank" rel="noopener">Записаться онлайн</a>
+    <a class="dock__tel" href="tel:+79257111211" aria-label="Позвонить: +7 (925) 711-12-11">Позвонить</a>
+  </div>
+</div>
+
+<script src="vibe.js"></script>
+<script>
+/* ===== Данные: таблица «Цветотипы внешности – справочник» (листы «Цветотипы», «Как определить», «Окрашивание»).
+   Цвета образцов – примерные оттенки для экрана, сверяются мастером. ===== */
+var H = { // оттенки волос
+  'чистый чёрный':'#141414','иссиня-чёрный':'#10131c','чёрный с синим отливом':'#10131c','холодный тёмный каштан':'#3a2e2b','холодный шоколад':'#4a3a33','графит':'#4b4c4f',
+  'платиновый блонд':'#e6e2da','серебристый блонд':'#d9d9d6','чёрный':'#161616','чёрный кофе':'#231a16','тёмный холодный шоколад':'#3b2d29','баклажан':'#3d2233','тёмная вишня':'#4a1a24','бордо':'#5a1c28',
+  'пепельно-коричневый':'#6b5f58','холодный бургунди':'#5b1f33',
+  'медовый блонд':'#c99a5b','пшеничный':'#d8b77f','золотисто-русый':'#a9804e','светлый каштан':'#7a5234','ярко-медный':'#b5541f','рыже-медный':'#a8481f','золотисто-рыжий':'#c0692c',
+  'тёплый шоколад с золотым бликом':'#5a3822','медово-каштановый':'#7d5230','насыщенный золотой блонд':'#c89a4e','яркая медь':'#b8501c',
+  'золотой блонд':'#d1a860','светлая карамель':'#b98a55','золотисто-медный':'#b8662c','клубничный блонд':'#d59a72',
+  'светлый золотистый блонд':'#dcbb82','бежевый блонд':'#d4bd9c','светлый клубничный':'#dca889','песочный':'#c7a67a',
+  'пепельный блонд':'#bfb6a8','холодный русый':'#8b7b6b','холодный шатен':'#5a4a41','жемчужный блонд':'#ddd6cc','холодный бежевый блонд':'#c9bba6','светло-русый холодный':'#a3927f',
+  'пепельно-русый':'#8f8374','холодный светлый шатен':'#6e5d51','серебристые оттенки':'#c4c3c0','«пыльный» русый':'#8e7f70','мягкий холодный шатен':'#665548','мягкий золотистый блонд в мелировании':'#c7a877','холодный бежевый':'#c3b4a0',
+  'тёплый каштан':'#6b3f24','золотистый каштан':'#7e4f2a','мокко':'#6a4a36','карамель':'#a8703c','сочная медь':'#b04a1b','терракотовый':'#a54a2a','тёмно-рыжий':'#8a3a1a',
+  'мягкая карамель':'#a97b50','тёплый русый':'#8f6c48','медово-бежевый':'#b99469','приглушённая медь':'#9a5a3a',
+  'медный':'#b35a24','рыжий':'#c05a22','каштан с медным отливом':'#6e3a20','тёплый шоколад':'#5a3822',
+  'тёмный шоколад':'#3b261a','горький шоколад':'#2f1f17','красное дерево':'#5e2a1e','тёмная медь':'#7e3518','тёплый почти чёрный':'#231812'
+};
+
+var SEASONS = [
+  { id:'vesna', face:'Тёплая персиковая кожа, светлые глаза, медово-рыжеватые волосы', looks:[['Яркая весна','Яркое вечернее платье'],['Тёплая весна','Льняное платье «Хлоя»'],['Светлая весна','Зелёное хлопковое летнее платье на пуговицах']], name:'Весна', temp:'тёплый', ring:['медовый блонд','золотисто-рыжий','светлый каштан'],
+    lead:'Чистые светлые тёплые оттенки, ярче Осени.',
+    look:[['Кожа','Тёплый подтон: персиковая, золотистая, слоновая кость с бронзовым отливом'],['Волосы','От русых до золотисто-рыжих'],['Глаза','Светлые: голубые, зелёные, светло-карие']],
+    wear:[['В одежде','Тёплые и светлые. Кремовый вместо белого'],['Избегать','Серые, блёклые, холодные, чёрный'],['Металлы','Жёлтое и розовое золото, блестящее. Не идут серебро и платина']],
+    dye:{warm:'Медовый блонд, пшеничный, золотисто-русый, светлый каштан с тёплыми переливами.',bright:'Ярко-медный, рыже-медный, золотисто-рыжий – подчеркнут живость внешности.',cold:'Здесь важно не перегнуть: допустим только минимальный лёгкий пудровый акцент – матовый розовый или матовый пепельный на медном тоне. Иначе появится серость.',tech:'Лёгкое мелирование медовыми прядями, балаяж с эффектом выгоревших на солнце волос, тонирование для тёплого блеска.'},
+    drape:{good:[['Кремовый','#f1e2c4'],['Персиковый','#f2b58a'],['Коралловый','#ee8568'],['Тёплый зелёный','#8fb257']],bad:[['Чёрный','#161616'],['Пыльно-серый','#9a9a98'],['Ледяной голубой','#bcd8ea'],['Холодная фуксия','#c2185b']]},
+    subs:[
+      {id:'yarkaya',name:'Яркая весна',feature:'Заметный контраст волос и кожи, холодных тонов нет.',look:[],wear:[['В одежде','Чистые яркие цвета без замутнённости и сложных подтонов'],['Избегать','Холодные, приглушённые']],
+        hair:['тёплый шоколад с золотым бликом','медово-каштановый','насыщенный золотой блонд','яркая медь'],tech:'Контрастный балаяж чистыми тёплыми прядями',avoid:'Пепел, приглушённые «пыльные» оттенки, иссиня-чёрный',metals:'Полированное жёлтое и розовое золото. Белое золото допустимо'},
+      {id:'teplaya',name:'Тёплая весна',feature:'Ни капли холода.',look:[['Кожа','Светлая'],['Волосы','Светлые, с жёлтым тёплым подтоном, реже песочные'],['Глаза','Светлые, ровного цвета без вкраплений и переливов']],wear:[['Избегать','Любые холодные оттенки']],
+        hair:['золотой блонд','медовый блонд','светлая карамель','золотисто-медный','клубничный блонд'],tech:'',avoid:'Пепельный, холодный бежевый, чёрный, холодный тёмный',metals:'Жёлтое золото, латунь, розовое золото. Не идут серебро и платина'},
+      {id:'svetlaya',name:'Светлая весна',feature:'Всё во внешности светлое.',look:[['Кожа','Светлая или бледная, бывают веснушки'],['Волосы','Чаще блонд, бывают песочные и рыжеватые']],wear:[],
+        hair:['светлый золотистый блонд','медовый блонд','бежевый блонд','светлый клубничный','песочный'],tech:'Airtouch, мягкое мелирование, тонирование',avoid:'Пепельный, тёмные (шоколад, чёрный), насыщенный рыжий, холодный платиновый',metals:'Светлое жёлтое золото, розовое золото, цвет шампань. Тонкие изящные украшения'}
+    ]},
+  { id:'leto', face:'Холодная розоватая кожа, серо-голубые глаза, пепельный блонд', looks:[['Холодное лето','Лавандовое платье'],['Мягкое лето','Нежно-жёлтое платье-трансформер в пол']], name:'Лето', temp:'холодный', ring:['пепельный блонд','холодный русый','холодный шатен'],
+    lead:'Светлая холодная палитра. Представительницы могут быть очень непохожи друг на друга.',
+    look:[['Кожа','Холодный подтон: розоватая, слегка оливковая, фарфоровая'],['Волосы','Русые с пепельным оттенком, от самых светлых до средне-тёмных'],['Глаза','Серо-голубые, серо-зелёные, ореховые с холодным отливом']],
+    wear:[['В одежде','Светлые и прохладные, например синий'],['Избегать','Тёплые оранжевые, жёлтые, бежевые'],['Металлы','Серебро, белое золото, платина, лучше матовые. Не идёт яркое жёлтое золото']],
+    dye:{warm:'Медь и золото лучше избегать – они добавят желтизны и слишком «согреют» образ.',bright:'Допустим яркий акцент прядями – пепельно-розовый или ледяной синий, но основа остаётся холодной.',cold:'Пепельный блонд, холодный русый, холодный шатен, графит.',tech:'Контуринг – высветление прядей у лица для свежести, деликатное мелирование, дымчатые и серо-бежевые переливы.'},
+    drape:{good:[['Приглушённый синий','#5b7db1'],['Лавандовый','#b7a6cf'],['Пыльно-розовый','#c9a0ae'],['Серо-голубой','#9fb3c8']],bad:[['Оранжевый','#e8772e'],['Жёлтый','#ebc53b'],['Тёплый бежевый','#d6bc94']]},
+    subs:[
+      {id:'svetloe',name:'Светлое лето',feature:'Контраст есть, но почти незаметен.',look:[['Кожа','Лёгкий, едва заметный сероватый оттенок'],['Волосы','Светло-русые и холодный блонд, лёгкий серый оттенок'],['Глаза','Лёгкий сероватый оттенок']],wear:[],
+        hair:['жемчужный блонд','пепельный блонд','холодный бежевый блонд','светло-русый холодный'],tech:'Airtouch, растяжка, тонирование в холод',avoid:'Тёмные, рыжий, золотистая желтизна, чёрный',metals:'Серебро, белое золото, платина, мягкое розовое золото'},
+      {id:'holodnoe',name:'Холодное лето',feature:'Контраст только в глазах, преобладает холод.',look:[['Кожа','Серовато-бледная, тепла нет совсем'],['Волосы','Серовато-бледные оттенки'],['Глаза','Контрастные']],wear:[['Избегать','Тёплые оттенки']],
+        hair:['пепельно-русый','холодный светлый шатен','пепельный блонд','серебристые оттенки'],tech:'',avoid:'Тёплые: медь, мёд, карамель, золотистый',metals:'Серебро, платина, белое золото, матовая фактура'},
+      {id:'myagkoe',name:'Мягкое лето',feature:'Мягкие холодные цвета, контраст неяркий, возможны лёгкие тёплые ноты.',look:[['Кожа','Часто оливковые оттенки']],wear:[],
+        hair:['пепельно-русый','«пыльный» русый','холодный бежевый','мягкий холодный шатен','мягкий золотистый блонд в мелировании'],tech:'Airtouch и балаяж без резкого контраста',avoid:'Чёрный, яркий рыжий, контрастное мелирование, платиновый',metals:'Матовое и состаренное серебро, белое золото, приглушённое розовое золото, пьютер. Не идёт блестящее жёлтое золото'}
+    ]},
+  { id:'osen', face:'Золотистая кожа с веснушками, янтарные глаза, медные волосы', looks:[['Мягкая осень','Платье-трапеция А-силуэта'],['Тёплая осень','Свободное платье'],['Тёмная осень','Макси-платье с открытыми плечами']], name:'Осень', temp:'тёплый', ring:['карамель','сочная медь','тёплый каштан'],
+    lead:'Очень тёплый тип, холодных тонов нет. Часто эффектная внешность.',
+    look:[['Кожа','Тёплый подтон: золотистая, бежево-золотистая, иногда с веснушками'],['Волосы','От рыжих до тёмно-каштановых с рыжинкой'],['Глаза','Карие, зелёные с золотыми искрами, янтарные']],
+    wear:[['В одежде','Тёплая и глубокая палитра, тёмные тона'],['Избегать','Чёрный, красный, синий в одежде и макияже. Синие и белые тени бледнят'],['Металлы','Жёлтое золото, бронза, медь, латунь, матовые и состаренные. Не идут серебро и платина']],
+    dye:{warm:'Тёплый каштан, золотистый каштан, мокко – нейтрально-тёплый коричневый, карамельные акценты.',bright:'Сочная медь, терракотовый, рыже-медный, тёмно-рыжий с тёплыми переливами.',cold:'Пепел и графит обычно спорят с тёплой кожей – утяжеляют образ и добавляют строгости.',tech:'Балаяж с тёплыми акцентами, «солнечные» пряди, тонирование для глубины тёплого коричневого.'},
+    drape:{good:[['Терракотовый','#b5553a'],['Горчичный','#c9962b'],['Оливковый','#6b6b2e'],['Шоколадный','#5a3a24']],bad:[['Чёрный','#161616'],['Чистый красный','#d0202a'],['Синий','#2a4fb0']]},
+    subs:[
+      {id:'myagkaya',name:'Мягкая осень',feature:'Смесь Холодного Лета и Тёплой Осени: тёплые и холодные ноты поровну, контраста нет, внешность спокойная и ровная.',look:[],wear:[['Избегать','Резкие контрасты']],
+        hair:['мягкая карамель','тёплый русый','медово-бежевый','золотисто-русый','приглушённая медь'],tech:'Балаяж и Airtouch без резкого контраста',avoid:'Чёрный, яркий рыжий, пепел, резкое мелирование',metals:'Матовое жёлтое и розовое золото, бронза, состаренный металл'},
+      {id:'teplaya',name:'Тёплая осень',feature:'Преобладает тепло, холодных оттенков почти нет.',look:[['Волосы','Тёмные'],['Глаза','Тёмные']],wear:[['Избегать','Холодные оттенки']],
+        hair:['медный','рыжий','каштан с медным отливом','тёплый шоколад','золотистый каштан'],tech:'',avoid:'Пепельные, холодный блонд, чёрный, баклажан',metals:'Жёлтое золото, медь, бронза, латунь'},
+      {id:'temnaya',name:'Тёмная осень',feature:'Всё во внешности тёплое.',look:[['Кожа','Смуглая, светлая – редкое исключение'],['Волосы','Тёмные']],wear:[],
+        hair:['тёмный шоколад','горький шоколад','тёплый каштан','красное дерево','тёмная медь','тёплый почти чёрный'],tech:'',avoid:'Светлый блонд, пепел, холодный чёрный с синевой',metals:'Жёлтое и античное золото, бронза, медь, можно массивные украшения'}
+    ]},
+  { id:'zima', face:'Фарфоровая кожа, ледяные голубые глаза, иссиня-чёрные волосы – максимальный контраст', looks:[['Тёмная зима','Красное платье-лапша'],['Холодная зима','Брусничное коктейльное платье миди']], name:'Зима', temp:'холодный', ring:['платиновый блонд','холодный шоколад','иссиня-чёрный'],
+    lead:'Сильный контраст кожи и волос, эффектная внешность.',
+    look:[['Кожа','Холодный подтон: очень светлая фарфоровая или оливковая без золотистого отлива. Резко контрастирует с волосами'],['Волосы','Тёмные: от тёмного каштана до иссиня-чёрных'],['Глаза','Яркие: ледяной голубой, насыщенно-зелёный, чёрно-карий']],
+    wear:[['В одежде','Контрастные, тёмные и глубокие, смелые: синий, серый, чёрный'],['Избегать','Горчичный, жёлтый, приглушённые оттенки'],['Металлы','Серебро, белое золото, платина. Не идут жёлтое золото и медь']],
+    dye:{warm:'Золото и медь лучше исключить – они размывают контраст и добавляют лишней мягкости.',bright:'Контрастные холодные: чистый чёрный, холодный тёмный каштан, иссиня-чёрный, холодный фиолетовый или синий акцент.',cold:'Холодный шоколад без рыжины, графит, холодный каштан, платиновый или серебристый блонд – очень чистый, не матовый, без намёка на тепло.',tech:'Минимальные акценты холодного блонда на тёмной базе, контуринг для подчёркивания черт лица, шатуш для глубины.'},
+    drape:{good:[['Чёрный','#111316'],['Королевский синий','#1f3fa3'],['Графитовый','#4a4f55'],['Брусничный','#9e1b45']],bad:[['Горчичный','#c9962b'],['Жёлтый','#ebc53b'],['Пыльная пудра','#bfa79a']]},
+    subs:[
+      {id:'temnaya',name:'Тёмная зима',feature:'В целом прохладная, но что-то одно – глаза или волосы – может быть тёплым.',look:[['Кожа','Очень светлая, фарфоровая. Бывает от природы смуглая с тёплым подтоном – из-за этого тип часто путают'],['Волосы','Тёмные, может быть тёплый подтон'],['Глаза','Тёмные, может быть тёплый подтон']],wear:[],
+        hair:['чёрный','чёрный кофе','тёмный холодный шоколад','баклажан','тёмная вишня','бордо'],tech:'Тонирование в глубину, мягкий блик на 1–2 тона',avoid:'Холодные серые оттенки блонда, золотисто-рыжий, медь',metals:'Белое золото, серебро, платина, чернёное серебро, гематит'},
+      {id:'holodnaya',name:'Холодная зима',feature:'Холод во всём.',look:[['Кожа','Фарфоровая или с заметным розовым отливом'],['Волосы','Темноватые, холодного оттенка'],['Глаза','Холодной гаммы, подчёркивают прохладу кожи']],wear:[],
+        hair:['иссиня-чёрный','холодный тёмный каштан','пепельно-коричневый'],tech:'Минимальные акценты холодного блонда на тёмной базе',avoid:'Любые тёплые: медь, золото, мёд, карамель',metals:'Серебро, платина, белое золото. Не идёт жёлтое золото'},
+      {id:'yarkaya',name:'Яркая зима',feature:'Самый эффектный тип: максимальный контраст, холод во всём, тёплых нот почти не бывает.',look:[],wear:[],
+        hair:['чёрный с синим отливом','тёмный холодный шоколад','холодный бургунди','баклажан'],tech:'Акценты холодного бургунди или баклажана, минимальные акценты холодного блонда на тёмной базе',avoid:'Приглушённые «пыльные» оттенки, серо-русый, размытый тёплый омбре',metals:'Блестящее полированное серебро, платина, белое золото. Не идут матовые и состаренные'}
+    ]}
+];
+
+var SIGNS = [ // лист «Как определить»
+  ['Костяшки сжатого кулака','Желтоватые','Синевато-розовые'],
+  ['Вены на запястье','Зеленоватые','Голубые'],
+  ['Лицо при дневном свете','Персиковый отлив','Розовый отлив'],
+  ['Натуральный цвет волос','Медовые, русые, с рыжим отливом','Пепельный блонд, серо-русые, холодный коричневый, чёрный'],
+  ['Глаза','Карие, ореховые, зелёные','Серые, голубые, синие']
+];
+
+/* ===== помощники ===== */
+function el(tag, attrs, html) { var e = document.createElement(tag); for (var k in attrs || {}) e.setAttribute(k, attrs[k]); if (html != null) e.innerHTML = html; return e; }
+function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
+function cap(s) { return s.charAt(0).toUpperCase() + s.slice(1); }
+function dl(rows) { return '<dl class="dl">' + rows.map(function (r) { return '<div><dt>' + esc(r[0]) + '</dt><dd>' + esc(r[1]) + '</dd></div>'; }).join('') + '</dl>'; }
+function byId(id) { return SEASONS.filter(function (s) { return s.id === id; })[0]; }
+
+/* ===== 1 · кольцо прядей ===== */
+(function () {
+  var ring = document.getElementById('ring'), i = 0;
+  SEASONS.forEach(function (s) {
+    var a = el('a', { class: 'ring__group', href: '#' + s.id, 'aria-label': s.name + ': ' + s.ring.join(', ') });
+    var st = el('span', { class: 'ring__strands', 'aria-hidden': 'true' });
+    s.ring.forEach(function (n, k) { var d = el('span', { class: 'strand', title: cap(n) }); d.style.setProperty('--c', H[n]); d.style.setProperty('--i', i++); st.appendChild(d); });
+    a.appendChild(st);
+    a.appendChild(el('span', { class: 'ring__name' }, s.name));
+    a.appendChild(el('span', { class: 'ring__hint' }, cap(s.temp)));
+    ring.appendChild(a);
+  });
+})();
+
+/* ===== 2 · тест ===== */
+(function () {
+  var rows = document.getElementById('quizRows'), ans = {};
+  var qs = SIGNS.map(function (s, i) { return { key: 's' + i, name: s[0], opts: [['warm', 'Тёплый', s[1]], ['cold', 'Холодный', s[2]]] }; });
+  qs.push({ key: 'hair', name: 'Натуральный цвет волос – светлота', opts: [['light', 'Светлые', 'Блонд, русые'], ['dark', 'Тёмные', 'Каштан, тёмно-русые, чёрные']] });
+  qs.forEach(function (q) {
+    var r = el('div', { class: 'q', role: 'group', 'aria-label': q.name });
+    r.appendChild(el('span', { class: 'q__name' }, esc(q.name)));
+    var o = el('div', { class: 'q__opts' });
+    q.opts.forEach(function (op) {
+      var b = el('button', { type: 'button', class: 'opt', 'aria-pressed': 'false' }, esc(op[1]) + '<small>' + esc(op[2]) + '</small>');
+      b.addEventListener('click', function () { ans[q.key] = op[0]; [].forEach.call(o.children, function (x) { x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); }); update(); });
+      o.appendChild(b);
+    });
+    r.appendChild(o); rows.appendChild(r);
+  });
+  function update() {
+    var n = Object.keys(ans).length, total = qs.length;
+    var lab = document.getElementById('resLabel'), t = document.getElementById('resTitle'), p = document.getElementById('resText'), a = document.getElementById('resLink');
+    if (n < total) { lab.textContent = 'Отвечено ' + n + ' из ' + total; return; }
+    var warm = 0; for (var i = 0; i < SIGNS.length; i++) if (ans['s' + i] === 'warm') warm++;
+    var isWarm = warm >= 3, light = ans.hair === 'light';
+    var id = isWarm ? (light ? 'vesna' : 'osen') : (light ? 'leto' : 'zima'), s = byId(id);
+    lab.textContent = (isWarm ? 'Тёплых признаков ' + warm : 'Холодных признаков ' + (SIGNS.length - warm)) + ' из ' + SIGNS.length + ', волосы ' + (light ? 'светлые' : 'тёмные');
+    t.textContent = 'Похоже, вы – ' + s.name;
+    p.textContent = s.lead + ' Уточнить подтип поможет примерка и консультация при дневном свете.';
+    a.href = '#' + id; a.hidden = false;
+    if (window.selectFace) selectFace(id);
+  }
+})();
+
+/* ===== 3 · сезоны и подтипы, адреса вида #zima и #zima-temnaya ===== */
+var cur = { season: 'vesna', sub: null };
+(function () {
+  var tabs = document.getElementById('tabs');
+  SEASONS.forEach(function (s) {
+    var b = el('button', { type: 'button', class: 'tab', role: 'tab', id: 'tab-' + s.id, 'aria-controls': 'panel', 'aria-selected': 'false' }, s.name);
+    b.addEventListener('click', function () { go(s.id, null, false); });
+    tabs.appendChild(b);
+  });
+  tabs.addEventListener('keydown', function (e) {
+    if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return;
+    var i = SEASONS.findIndex(function (s) { return s.id === cur.season; }), n = SEASONS.length;
+    var next = SEASONS[(i + (e.key === 'ArrowRight' ? 1 : n - 1)) % n].id; go(next, null, false); document.getElementById('tab-' + next).focus();
+  });
+})();
+
+function renderSeason(s, subId) {
+  var sub = s.subs.filter(function (x) { return x.id === subId; })[0] || s.subs[0];
+  var p = document.getElementById('panel');
+  p.setAttribute('aria-labelledby', 'tab-' + s.id);
+  var html = '';
+  html += '<div class="panel__top"><div><h3 class="panel__title">' + s.name + '</h3><p class="panel__lead">' + esc(s.lead) + '</p><div class="panel__strands" aria-hidden="true">' + s.ring.map(function (n) { return '<span class="strand" style="--c:' + H[n] + '; --i:0" title="' + cap(n) + '"></span>'; }).join('') + '</div></div><div>' + dl(s.look.concat(s.wear)) + '</div></div>';
+  html += '<div class="dye"><div><h4>Тёплые оттенки</h4><p>' + esc(s.dye.warm) + '</p></div><div><h4>Яркие оттенки</h4><p>' + esc(s.dye.bright) + '</p></div><div><h4>Холодные оттенки</h4><p>' + esc(s.dye.cold) + '</p></div>'
+    + '<div class="dye__tech"><span class="v-label">Техники окрашивания</span><p>' + esc(s.dye.tech) + '</p></div></div>';
+  html += '<div class="subs"><div class="subs__bar"><h3>Подтипы</h3><div class="subtabs" role="tablist" aria-label="Подтип">'
+    + s.subs.map(function (x) { return '<button type="button" class="subtab" role="tab" data-sub="' + x.id + '" aria-selected="' + (x === sub) + '">' + x.name + '</button>'; }).join('') + '</div></div>';
+  var look = sub.look.concat(sub.wear);
+  html += '<div class="sub"><div><h4 class="sub__name">' + sub.name + '</h4><p class="sub__feature">' + esc(sub.feature) + '</p>' + (look.length ? dl(look) : '') + '</div>';
+  html += '<div class="hair"><h4>Цвет волос: подходит</h4><ul class="chips">'
+    + sub.hair.map(function (n) { return '<li class="chip"><i style="--c:' + (H[n] || '#999') + '"></i><span>' + esc(cap(n)) + '</span></li>'; }).join('') + '</ul>'
+    + '<dl class="hair__more">' + (sub.tech ? '<div><dt>Техники</dt><dd>' + esc(sub.tech) + '</dd></div>' : '')
+    + '<div><dt>Избегать</dt><dd>' + esc(sub.avoid) + '</dd></div><div><dt>Металлы</dt><dd>' + esc(sub.metals) + '</dd></div></dl>'
+    + '<p class="note">Образцы – примерные оттенки на экране. Точный тон зависит от вашей базы и подбирается на консультации.</p></div></div></div>';
+  p.innerHTML = html;
+  [].forEach.call(p.querySelectorAll('.subtab'), function (b) { b.addEventListener('click', function () { go(s.id, b.getAttribute('data-sub'), false); }); });
+  [].forEach.call(document.querySelectorAll('.tab'), function (b) { b.setAttribute('aria-selected', b.id === 'tab-' + s.id ? 'true' : 'false'); b.tabIndex = b.id === 'tab-' + s.id ? 0 : -1; });
+}
+
+function go(seasonId, subId, scroll) {
+  var s = byId(seasonId); if (!s) return;
+  cur.season = seasonId; cur.sub = subId;
+  renderSeason(s, subId);
+  var h = '#' + seasonId + (subId ? '-' + subId : '');
+  if (scroll !== null && location.hash !== h) history.replaceState(null, '', h);
+  if (scroll) document.getElementById('sezony').scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
+  setTrySeason(seasonId);
+}
+function fromHash(scroll) {
+  var m = /^#(vesna|leto|osen|zima)(?:-([a-z]+))?$/.exec(location.hash);
+  if (m) go(m[1], m[2] || null, scroll); return !!m;
+}
+window.addEventListener('hashchange', function () { fromHash(true); });
+
+/* ===== 4 · примерка ===== */
+var mirror = document.getElementById('mirror'), trySeason = null;
+function setTrySeason(id) {
+  trySeason = id; var s = byId(id);
+  [].forEach.call(document.querySelectorAll('#trySeason button'), function (b) { b.setAttribute('aria-pressed', b.getAttribute('data-id') === id ? 'true' : 'false'); });
+  function fill(box, list) {
+    box.innerHTML = '';
+    list.forEach(function (c) {
+      var b = el('button', { type: 'button', class: 'sw', 'aria-pressed': 'false' }, '<i style="--c:' + c[1] + '"></i>' + esc(c[0]));
+      b.addEventListener('click', function () {
+        var on = b.getAttribute('aria-pressed') !== 'true';
+        [].forEach.call(document.querySelectorAll('.sw'), function (x) { x.setAttribute('aria-pressed', 'false'); });
+        b.setAttribute('aria-pressed', on ? 'true' : 'false');
+        mirror.style.setProperty('--c', c[1]); mirror.classList.toggle('is-on', on);
+        document.getElementById('clothName').textContent = on ? c[0] : '';
+      });
+      box.appendChild(b);
+    });
+  }
+  fill(document.getElementById('swGood'), s.drape.good);
+  fill(document.getElementById('swBad'), s.drape.bad);
+  mirror.classList.remove('is-on'); document.getElementById('clothName').textContent = '';
+}
+(function () {
+  var seg = document.getElementById('trySeason');
+  SEASONS.forEach(function (s) {
+    var b = el('button', { type: 'button', 'data-id': s.id, 'aria-pressed': 'false' }, s.name);
+    b.addEventListener('click', function () { setTrySeason(s.id); });
+    seg.appendChild(b);
+  });
+  // своё фото: только в браузере, через objectURL, без отправки
+  var ownUrl = null;
+  [].forEach.call(document.querySelectorAll('input[data-own]'), function (inp) {
+    inp.addEventListener('change', function (e) {
+      var f = e.target.files && e.target.files[0]; if (!f) return;
+      if (ownUrl) URL.revokeObjectURL(ownUrl);
+      ownUrl = URL.createObjectURL(f); e.target.value = '';
+      var a = document.getElementById('face');
+      a.removeAttribute('srcset'); a.src = ownUrl; a.alt = 'Ваше фото';
+      document.getElementById('faceCap').textContent = 'Ваше фото – только на этом устройстве';
+      var b = document.getElementById('meFace');
+      b.src = ownUrl; b.alt = 'Ваше фото'; b.hidden = false;
+      document.getElementById('meBox').classList.add('has-photo');
+    });
+  });
+})();
+
+/* ===== 2б · лица сезонов ===== */
+(function () {
+  var tabs = document.getElementById('faceTabs'), cmp = document.getElementById('compare'), cur = null;
+  SEASONS.forEach(function (s) {
+    var b = el('button', { type: 'button', class: 'ftab', role: 'tab', 'aria-selected': 'false', 'data-id': s.id, 'aria-controls': 'recs' },
+      '<img src="assets/face-' + s.id + '-480.webp" alt="" width="480" height="640" loading="lazy">' + s.name);
+    b.addEventListener('click', function () { selectFace(s.id); });
+    tabs.appendChild(b);
+  });
+  function pal(list, cls) { return '<ul class="pal ' + (cls || '') + '">' + list.map(function (c) { return '<li><i style="--c:' + c[1] + '"></i>' + esc(c[0]) + '</li>'; }).join('') + '</ul>'; }
+  window.selectFace = function (id) {
+    var s = byId(id); if (!s || id === cur) return; cur = id;
+    [].forEach.call(tabs.children, function (b) { var on = b.getAttribute('data-id') === id; b.setAttribute('aria-selected', on ? 'true' : 'false'); b.tabIndex = on ? 0 : -1; });
+    var img = document.getElementById('repFace');
+    img.src = 'assets/face-' + id + '.webp'; img.alt = 'Яркая представительница сезона ' + s.name + ' – иллюстрация';
+    document.getElementById('repCap').textContent = 'Иллюстрация: ' + s.name;
+    var hair = []; s.subs.forEach(function (x) { x.hair.forEach(function (n) { if (hair.indexOf(n) < 0) hair.push(n); }); });
+    var w = {}; s.wear.forEach(function (r) { w[r[0]] = r[1]; });
+    document.getElementById('recs').innerHTML =
+      '<div class="recs__head"><h3>' + s.name + '</h3><p>' + esc(s.face) + '.</p></div>'
+      + '<div class="rec"><h4>Стиль</h4><p>' + esc(w['В одежде']) + '. ' + esc(s.lead) + '</p>'
+        + '<ul class="looks">' + s.looks.map(function (l) { return '<li><span>' + esc(l[0]) + '</span><span>' + esc(l[1]) + '</span></li>'; }).join('') + '</ul>'
+        + '<p class="muted">Избегать: ' + esc(w['Избегать']) + '.</p></div>'
+      + '<div class="rec"><h4>Цвет</h4>' + pal(s.drape.good) + pal(s.drape.bad, 'pal--bad')
+        + '<p class="muted">Металлы: ' + esc(w['Металлы']) + '.</p></div>'
+      + '<div class="rec"><h4>Окрашивание</h4><ul class="chips">' + hair.slice(0, 8).map(function (n) { return '<li class="chip"><i style="--c:' + (H[n] || '#999') + '"></i><span>' + esc(cap(n)) + '</span></li>'; }).join('') + '</ul>'
+        + '<p>' + esc(s.dye.tech) + '</p><p><a class="textlink" href="#' + id + '">Подтипы и чего избегать</a></p></div>';
+    var dots = document.getElementById('cmpDots'); dots.innerHTML = '';
+    function dot(c, bad) {
+      var b = el('button', { type: 'button', class: 'dot', 'aria-pressed': 'false', 'aria-label': c[0] + (bad ? ' – цвет не сезона' : ''), title: c[0] });
+      b.style.setProperty('--c', c[1]);
+      b.addEventListener('click', function () {
+        var on = b.getAttribute('aria-pressed') !== 'true';
+        [].forEach.call(dots.querySelectorAll('.dot'), function (x) { x.setAttribute('aria-pressed', 'false'); });
+        b.setAttribute('aria-pressed', on ? 'true' : 'false');
+        cmp.style.setProperty('--c', c[1]); cmp.classList.toggle('is-on', on);
+      });
+      dots.appendChild(b);
+    }
+    s.drape.good.forEach(function (c) { dot(c, false); });
+    dots.appendChild(el('span', { class: 'dots__sep', 'aria-hidden': 'true' }));
+    s.drape.bad.forEach(function (c) { dot(c, true); });
+    cmp.classList.remove('is-on');
+  };
+  tabs.addEventListener('keydown', function (e) {
+    if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return;
+    var i = SEASONS.findIndex(function (s) { return s.id === cur; }), n = SEASONS.length;
+    var next = SEASONS[(i + (e.key === 'ArrowRight' ? 1 : n - 1)) % n].id; selectFace(next); tabs.querySelector('[data-id="' + next + '"]').focus();
+  });
+  selectFace('vesna');
+})();
+
+if (!fromHash(false)) go('vesna', null, null); // первый показ – без записи в адрес
+if (location.hash && /^#(vesna|leto|osen|zima)/.test(location.hash)) setTimeout(function () { document.getElementById('sezony').scrollIntoView(); }, 50);
+
+Vibe.mount(document.querySelector('.v-page'));
+
+// активный пункт меню
+(function () {
+  var links = [].slice.call(document.querySelectorAll('.nav a[href^="#"]')), cur = null;
+  var secs = links.map(function (a) { return document.querySelector(a.getAttribute('href')); });
+  function tick() {
+    var line = innerHeight * .4, hit = -1;
+    secs.forEach(function (el, i) { var r = el.getBoundingClientRect(); if (r.top <= line && r.bottom > line) hit = i; });
+    if (hit !== cur) { cur = hit; links.forEach(function (a, i) { a.classList.toggle('is-on', i === hit); }); }
+  }
+  addEventListener('scroll', tick, { passive: true }); tick();
+})();
+</script>
+</body>
+</html>

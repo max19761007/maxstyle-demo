@@ -1,0 +1,594 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow" data-publish>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>MaxStyle – стрижка и окрашивание у «Окружной», Москва</title>
+<meta name="description" content="Парикмахер-стилист Максим Смоляков: стрижки, Airtouch, балаяж, омбре, завивка, наращивание. Кабинет в 250 м от метро «Окружная», запись онлайн, в будни до 21:00.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:site_name" content="MaxStyle">
+<meta property="og:title" content="Стрижка и окрашивание в Москве: свой мастер на годы">
+<meta property="og:description" content="Airtouch, балаяж, завивка, наращивание. Кабинет у «Окружной», запись онлайн в будни до 21:00.">
+<meta property="og:url" content="https://max19761007.github.io/maxstyle-site/">
+<meta property="og:image" content="https://max19761007.github.io/maxstyle-site/assets/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" as="image" href="assets/hero-v.webp" fetchpriority="high" media="(min-width: 861px)">
+<link rel="preload" as="image" href="assets/hero-v-m.webp" fetchpriority="high" media="(max-width: 860px)">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Forum&family=Golos+Text:wght@400;600&display=swap" rel="stylesheet">
+<link rel="icon" href="assets/maxstyle-mark.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/maxstyle-mark-180.png">
+<link rel="stylesheet" href="assets/brand.css">
+<link rel="stylesheet" href="vibe.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"HairSalon","name":"MaxStyle","description":"Парикмахер-стилист Максим Смоляков: стрижки, сложное окрашивание, завивка, наращивание.","url":"https://max19761007.github.io/maxstyle-site/","image":"https://max19761007.github.io/maxstyle-site/assets/og.jpg","telephone":"+79257111211","openingHours":["Mo-Fr 10:00-21:00","Sa 10:00-19:00"],"address":{"@type":"PostalAddress","streetAddress":"Гостиничная ул., 9А, корп. 3, каб. 235","addressLocality":"Москва","addressCountry":"RU"},"priceRange":"от 1500 ₽","paymentAccepted":"Наличные, карта, QR-код, перевод","sameAs":["https://yandex.ru/maps/org/maxstyle/148404020570/"]}
+</script>
+<style>
+  /* ---- тема: цвета только из бренда MaxStyle (assets/brand.css), два шрифта бренда ---- */
+  .v-page {
+    --v-canvas: var(--stone); --v-surface: var(--stone-raised);
+    --v-ink: var(--graphite); --v-ink-soft: var(--steel);
+    --v-accent: var(--oxblood); --v-accent-ink: var(--on-oxblood);
+    --v-font-display: "Forum", "Times New Roman", serif;
+    --v-font-text: "Golos Text", "Segoe UI", system-ui, sans-serif;
+    /* бренд: теней нет, углы почти прямые – глубину даёт линия */
+    --v-e1: 0 0 0 1px var(--line);
+    --v-e2: 0 0 0 1px var(--line);
+    --v-radius: var(--radius-sm);
+    --v-track-tight: -0.005em;
+    --v-t-xs: clamp(0.8125rem, 0.79rem + 0.15vw, 0.85rem);
+    --v-t-sm: clamp(0.9375rem, 0.9rem + 0.2vw, 1rem);
+    --v-canvas-85: color-mix(in oklab, var(--v-canvas) 85%, transparent);
+    --v-accent-10: color-mix(in oklab, var(--v-accent) 10%, transparent);
+    --bar-bg: color-mix(in oklab, var(--stone) 90%, transparent);
+  }
+  html, body { background: var(--stone); }
+  html { scroll-padding-top: 5rem; }
+  .v-page .v-display { font-weight: 400; line-height: 1.04; }
+  .v-page h3 { font-weight: 400; }
+  /* подписи – строчными, без разрядки: бренд спокойный */
+  .v-page .v-label { text-transform: none; letter-spacing: 0; font-size: var(--v-t-sm); color: var(--v-ink-soft); }
+  .v-page .v-btn { border-radius: var(--radius-sm); box-shadow: none; font-size: var(--v-t-base); font-weight: 600; padding: .9em 1.5em; }
+  .v-page .v-btn:hover { box-shadow: none; background: color-mix(in oklab, var(--oxblood) 88%, black); }
+  .v-page .v-btn:focus-visible, .v-page a:focus-visible { outline: none; box-shadow: var(--focus-ring); }
+  .price { color: var(--brass-ink); font-weight: 600; font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .illu { font-size: var(--v-t-xs); color: var(--v-ink-soft); }
+
+  /* ---- шапка и активное меню ---------------------------------------------- */
+  .bar { position: fixed; inset: 0 0 auto 0; z-index: 30; display: flex; align-items: center; justify-content: space-between; gap: var(--v-5);
+    padding: var(--v-3) var(--v-gutter); transition: background-color .3s var(--v-ease-out), box-shadow .3s var(--v-ease-out); }
+  .bar.is-scrolled { background: var(--bar-bg); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); box-shadow: 0 1px 0 var(--line); }
+  .bar__mark { display: inline-flex; align-items: center; gap: .55rem; min-height: 44px; text-decoration: none; color: var(--graphite);
+    font-family: var(--v-font-display); font-size: 1.6rem; letter-spacing: .02em; line-height: 1; }
+  .bar__mark img { width: 30px; height: 30px; }
+  .nav { display: flex; gap: var(--v-1); }
+  .nav a { position: relative; display: inline-flex; align-items: center; min-height: 44px; padding: 0 var(--v-3); text-decoration: none; color: var(--steel); font-size: var(--v-t-sm);
+    transition: color .16s var(--v-ease-out); }
+  .nav a::after { content: ""; position: absolute; left: var(--v-3); right: var(--v-3); bottom: 8px; height: 1px; background: var(--brass);
+    transform: scaleX(0); transform-origin: left; transition: transform .28s var(--v-ease-out); }
+  .nav a.is-on { color: var(--graphite); }
+  .nav a.is-on::after { transform: scaleX(1); }
+  @media (hover: hover) and (pointer: fine) { .nav a:hover { color: var(--graphite); } }
+  .bar__right { display: flex; align-items: center; gap: var(--v-4); }
+  .bar__tel { text-decoration: none; font-weight: 600; font-size: var(--v-t-sm); color: var(--graphite); display: inline-flex; align-items: center; min-height: 44px; white-space: nowrap; }
+  @media (max-width: 1180px) { .bar__tel { display: none; } }
+  @media (max-width: 960px) { .nav { display: none; } }
+  @media (max-width: 860px) { .bar .v-btn { display: none; } .bar { padding-block: var(--v-2); } .bar__mark { font-size: 1.4rem; } }
+
+  /* на телефоне запись и звонок всегда под пальцем */
+  .dock { display: none; }
+  @media (max-width: 860px) {
+    .dock { position: fixed; z-index: 30; left: 0; right: 0; bottom: 0; display: grid; grid-template-columns: 1fr auto; gap: var(--v-3); align-items: center;
+      padding: var(--v-2) var(--v-gutter) calc(var(--v-2) + env(safe-area-inset-bottom)); background: var(--bar-bg); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); box-shadow: 0 -1px 0 var(--line); }
+    .dock .v-btn { justify-content: center; }
+    .dock__tel { display: inline-flex; align-items: center; min-height: 48px; padding: 0 var(--v-4); color: var(--graphite); font-weight: 600; text-decoration: none; box-shadow: inset 0 0 0 1px var(--line); border-radius: var(--radius-sm); }
+    .v-page { padding-bottom: 4.5rem; }
+  }
+
+  /* ---- акт 1 · hero: три статуса поверх одного кадра, кадр медленно приближается ---- */
+  .hero__photo { position: absolute; inset: 0; overflow: hidden; }
+  .hero__zoom { transform: scale(calc(1 + var(--v-p, 0) * .08)); transform-origin: 72% 62%; }
+  .hero__zoom img { position: absolute; inset: 0; width: 100%; height: 100%; max-width: none; object-fit: cover; object-position: 62% 50%; }
+  .hero__wash { position: absolute; inset: 0; z-index: 1; pointer-events: none;
+    background: linear-gradient(to right, color-mix(in oklab, var(--stone) 72%, transparent) 0%, color-mix(in oklab, var(--stone) 30%, transparent) 38%, transparent 58%); }
+  .hero .v-scrim--band { z-index: 1; background: linear-gradient(to top, color-mix(in oklab, var(--stone) 92%, transparent) 0%, color-mix(in oklab, var(--stone) 55%, transparent) 30%, transparent 55%); }
+
+  .steps { position: absolute; z-index: 3; left: var(--v-gutter); top: clamp(6.5rem, 15vh, 9rem); width: min(36rem, 86vw); }
+  .steps__dots { display: flex; gap: var(--v-2); margin-bottom: var(--v-4); list-style: none; padding: 0; }
+  .steps__dots li { --on: clamp(0, min((var(--v-p, 0) - var(--a)) * 10 + 1, (var(--b) - var(--v-p, 0)) * 10 + 1), 1);
+    width: 2rem; height: 2rem; display: grid; place-items: center; font-size: var(--v-t-xs); font-variant-numeric: tabular-nums;
+    box-shadow: inset 0 0 0 1px var(--brass); border-radius: var(--radius-round);
+    background: color-mix(in oklab, var(--oxblood) calc(var(--on) * 100%), transparent); color: color-mix(in oklab, var(--on-oxblood) calc(var(--on) * 100%), var(--graphite)); }
+  .steps__slot { position: relative; min-height: 5.5rem; }
+  .step { position: absolute; inset: 0 0 auto 0; }
+  .step p { font-family: var(--v-font-display); font-size: clamp(1.35rem, 1rem + 1vw, 1.9rem); line-height: 1.15; color: var(--graphite); max-width: 26ch; text-wrap: balance; }
+
+  .hero__offer { left: var(--v-gutter); bottom: clamp(2.5rem, 8vh, 5rem); max-width: min(52rem, 90vw); }
+  .hero__offer h1 { font-size: clamp(2.3rem, 1.2rem + 2.5vw, 3.6rem); line-height: 1.02; max-width: 19ch; }
+  .hero__offer .v-lede { margin-top: var(--v-4); max-width: 44ch; color: var(--graphite); }
+  .hero__cta { display: flex; flex-wrap: wrap; align-items: center; gap: var(--v-3) var(--v-6); margin-top: var(--v-5); }
+  .hero__tel { color: var(--graphite); text-decoration: none; font-size: var(--v-t-sm); display: inline-flex; align-items: center; min-height: 44px; gap: .35em; }
+  .hero__tel b { font-weight: 600; text-decoration: underline; text-decoration-color: var(--brass); text-underline-offset: .2em; }
+  @media (max-width: 860px) {
+    .hero__wash { background: linear-gradient(to bottom, color-mix(in oklab, var(--stone) 88%, transparent) 0%, color-mix(in oklab, var(--stone) 60%, transparent) 40%, transparent 58%); }
+    .hero__zoom img { object-position: 60% 50%; }
+    .hero .v-scrim--band { background: linear-gradient(to top, color-mix(in oklab, var(--stone) 96%, transparent) 0%, color-mix(in oklab, var(--stone) 86%, transparent) 30%, transparent 48%); }
+    .hero__offer { top: 4.5rem; bottom: auto; right: var(--v-gutter); max-width: none; }
+    .hero__offer h1 { font-size: clamp(2rem, 1.4rem + 3vw, 2.5rem); }
+    .hero__offer .v-lede { font-size: var(--v-t-base); margin-top: var(--v-3); }
+    .hero__cta { margin-top: var(--v-4); }
+    .steps { top: auto; bottom: calc(5.75rem + env(safe-area-inset-bottom)); right: var(--v-gutter); width: auto; }
+    .hero__tel { display: none; } /* на телефоне звонок в нижней панели */
+    .steps__dots { margin-bottom: var(--v-2); }
+    .steps__slot { min-height: 5.2rem; }
+    .step p { font-size: 1.45rem; }
+  }
+  @media (max-width: 600px) and (max-height: 760px) { .hero__offer .v-lede { display: none; } }
+
+  /* ---- акт 2 · страх сменить мастера: боль и поворот -------------------------- */
+  .fear__head { display: grid; gap: var(--v-3); margin-bottom: var(--v-7); max-width: 52rem; }
+  .fear__grid { display: grid; grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr); gap: var(--v-8) var(--v-9); align-items: start; }
+  .fear__fig { position: relative; overflow: hidden; aspect-ratio: 4 / 3; background: var(--stone-raised); }
+  .fear__fig img { width: 100%; height: 100%; object-fit: cover; }
+  .fear__fig figcaption { position: absolute; left: var(--v-4); bottom: var(--v-4); padding: .35em .7em; background: var(--v-canvas-85); }
+  .rows li { padding: var(--v-5) 0; border-top: 1px solid var(--line); display: grid; gap: var(--v-1); }
+  .rows li:last-child { border-bottom: 1px solid var(--line); }
+  .rows h3 { font-family: var(--v-font-display); font-size: var(--v-t-lg); line-height: 1.15; text-wrap: balance; }
+  .rows p { color: var(--steel); max-width: 48ch; text-wrap: pretty; }
+  .turn { margin-top: var(--v-6); padding: var(--v-6); background: var(--stone-raised); box-shadow: inset 0 0 0 1px var(--brass); display: grid; gap: var(--v-3); }
+  .turn__text { font-size: var(--v-t-lg); line-height: 1.4; text-wrap: pretty; }
+  .turn__text b { font-weight: 600; }
+  @media (max-width: 860px) {
+    .fear__head { margin-bottom: var(--v-6); }
+    .fear__grid { grid-template-columns: 1fr; gap: var(--v-6); }
+    .turn { padding: var(--v-5); }
+    .rows h3 { font-size: var(--v-t-base); }
+  }
+
+  /* ---- акт 3 · техники: реплики встык, кадр сменяется ------------------------- */
+  .tech { height: 100%; display: grid; grid-template-rows: auto 1fr; padding: clamp(6.5rem, 14vh, 8rem) var(--v-gutter) clamp(2rem, 6vh, 4rem); gap: var(--v-5); }
+  .tech__head { display: grid; grid-template-columns: 1fr auto; align-items: end; gap: var(--v-6); }
+  .tech__head .v-display--md { font-size: clamp(1.9rem, 1.3rem + 2vw, 3.2rem); }
+  .tech__index { list-style: none; margin: 0; padding: 0; display: flex; gap: var(--v-3); font-variant-numeric: tabular-nums; font-size: var(--v-t-sm); }
+  .tech__index li { --on: clamp(0, min((var(--v-p, 0) - var(--a)) * 10 + 1, (var(--b) - var(--v-p, 0)) * 10 + 1), 1);
+    width: 2.6rem; height: 2.6rem; display: grid; place-items: center; border-radius: var(--radius-round); box-shadow: inset 0 0 0 1px var(--brass);
+    background: color-mix(in oklab, var(--oxblood) calc(var(--on) * 100%), transparent); color: color-mix(in oklab, var(--on-oxblood) calc(var(--on) * 100%), var(--steel)); }
+  .tech__body { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); gap: var(--v-9); align-items: center; min-height: 0; }
+  .tech__copy { position: relative; min-height: 24rem; }
+  .tech__one { position: absolute; inset: auto 0 0 0; display: grid; gap: var(--v-3); max-width: 40rem; }
+  .tech__one h3 { font-family: var(--v-font-display); font-size: clamp(2rem, 1.3rem + 2.6vw, 3.6rem); line-height: 1.02; }
+  .tech__one > p { color: var(--steel); max-width: 46ch; text-wrap: pretty; }
+  .tech__list { display: grid; margin-top: var(--v-2); }
+  .tech__list li { display: flex; justify-content: space-between; gap: var(--v-4); padding: var(--v-2) 0; border-top: 1px solid var(--line); }
+  .tech__list li:last-child { border-bottom: 1px solid var(--line); }
+  .tech__cta { margin-top: var(--v-3); }
+  .tech__fig { position: relative; justify-self: end; width: min(100%, calc((100svh - 17rem) * .75), 30rem); aspect-ratio: 3 / 4; }
+  .tech__fig figure { position: absolute; inset: 0; overflow: hidden; background: var(--stone-raised); }
+  .tech__fig img { width: 100%; height: 100%; object-fit: cover; }
+  .tech__fig figcaption { position: absolute; right: var(--v-3); bottom: var(--v-3); padding: .3em .6em; background: var(--v-canvas-85); }
+  @media (max-width: 860px) {
+    .tech { padding-top: 4.2rem; gap: var(--v-3); padding-bottom: 5.5rem; }
+    .tech__head .v-display--md { font-size: var(--v-t-xl); }
+    .tech__index li { width: 2.1rem; height: 2.1rem; }
+    .tech__body { grid-template-columns: minmax(0, 1fr); grid-template-rows: auto 1fr; gap: var(--v-4); align-items: start; }
+    .tech__fig { order: -1; justify-self: start; width: 100%; aspect-ratio: auto; height: 30svh; }
+    .tech__fig img { object-position: 50% 35%; }
+    .tech__copy { min-height: 0; }
+    .tech__one { inset: 0 0 auto 0; gap: var(--v-2); }
+    .tech__one h3 { font-size: var(--v-t-xl); }
+    .tech__one > p { font-size: var(--v-t-sm); }
+    .tech__list li { font-size: var(--v-t-sm); padding: .35rem 0; }
+    .tech__cta { display: none; }
+  }
+  @media (max-width: 600px) and (max-height: 760px) { .tech__fig { height: 24svh; } .tech__one > p { display: none; } }
+
+  /* ---- акт 4 · прайс --------------------------------------------------------- */
+  .prices { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, .7fr); gap: var(--v-9); align-items: start; }
+  .prices__head { display: grid; gap: var(--v-3); max-width: 46rem; margin-bottom: var(--v-7); }
+  .pgroup + .pgroup { margin-top: var(--v-7); }
+  .pgroup h3 { font-family: var(--v-font-display); font-size: var(--v-t-xl); line-height: 1.1; margin-bottom: var(--v-3); }
+  .pgroup h3 small { font-family: var(--v-font-text); font-size: var(--v-t-sm); color: var(--steel); margin-left: .5em; }
+  .plist li { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: var(--v-1) var(--v-6); align-items: baseline; padding: var(--v-4) 0; border-top: 1px solid var(--line); }
+  .plist li:last-child { border-bottom: 1px solid var(--line); }
+  .plist .name { font-size: var(--v-t-base); }
+  .plist .note { grid-column: 1 / span 2; font-size: var(--v-t-sm); color: var(--steel); max-width: 60ch; text-wrap: pretty; }
+  .prices__aside { position: sticky; top: clamp(5.5rem, 13vh, 7.5rem); }
+  .incl { padding: var(--v-6); background: var(--stone-raised); box-shadow: inset 0 0 0 1px var(--brass); display: grid; gap: var(--v-4); }
+  .incl h3 { font-family: var(--v-font-display); font-size: var(--v-t-lg); }
+  .incl li { padding: var(--v-3) 0; border-top: 1px solid var(--line); display: grid; gap: .2em; }
+  .incl li b { font-weight: 600; }
+  .incl li span { font-size: var(--v-t-sm); color: var(--steel); }
+  .incl__link { color: var(--graphite); font-size: var(--v-t-sm); text-decoration-color: var(--brass); text-underline-offset: .22em; display: inline-flex; align-items: center; min-height: 44px; }
+  @media (max-width: 1100px) { .prices { grid-template-columns: minmax(0, 1.3fr) minmax(0, .8fr); gap: var(--v-7); } }
+  @media (max-width: 860px) {
+    .prices { grid-template-columns: 1fr; gap: var(--v-7); }
+    .prices__aside { position: static; }
+    .incl { padding: var(--v-5); }
+  }
+
+  /* ---- акт 5 · о мастере: настоящее фото с параллаксом, факты -------------------- */
+  .about { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: var(--v-7) var(--v-9); align-items: center; }
+  .about__fig { position: relative; overflow: hidden; aspect-ratio: 4 / 5; background: var(--stone-raised); }
+  .about__fig .v-layer { inset: -12% 0; }
+  .about__fig img { width: 100%; height: 100%; left: 0; top: 0; object-fit: cover; object-position: 50% 30%; }
+  .about__fig::after { content: ""; position: absolute; inset: var(--v-3); box-shadow: inset 0 0 0 1px color-mix(in oklab, var(--brass) 70%, transparent); pointer-events: none; }
+  .about__text { display: grid; gap: var(--v-4); }
+  .about__text > p { color: var(--steel); max-width: 44ch; text-wrap: pretty; }
+  .about__text blockquote { margin: var(--v-2) 0 0; font-family: var(--v-font-display); font-size: var(--v-t-lg); line-height: 1.3; max-width: 34ch; }
+  .about__text blockquote + span { font-size: var(--v-t-sm); color: var(--steel); }
+  .facts { margin: var(--v-4) 0 0; display: grid; }
+  .facts div { display: grid; grid-template-columns: 9rem 1fr; gap: var(--v-4); padding: var(--v-3) 0; border-top: 1px solid var(--line); }
+  .facts div:last-child { border-bottom: 1px solid var(--line); }
+  .facts dt { color: var(--steel); font-size: var(--v-t-sm); }
+  .facts dd { margin: 0; }
+  @media (max-width: 860px) {
+    .about { grid-template-columns: 1fr; }
+    .about__fig { aspect-ratio: 4 / 4.2; }
+    .facts div { grid-template-columns: 1fr; gap: var(--v-1); }
+  }
+
+  /* ---- акт 6 · отзывы: тёмная секция бренда ----------------------------------- */
+  .reviews-sec { background: var(--panel); color: var(--on-panel); --v-ink: var(--on-panel); --v-ink-soft: #AEB6BC;
+    --v-hair: color-mix(in oklab, var(--on-panel) 16%, transparent); }
+  .reviews-sec .v-label { color: var(--v-ink-soft); }
+  .reviews__head { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: var(--v-6) var(--v-8); align-items: end; margin-bottom: var(--v-8); }
+  .reviews__head .v-display--md { letter-spacing: .005em; }
+  .rating { display: grid; grid-template-columns: auto auto; gap: var(--v-1) var(--v-4); align-items: center; font-size: var(--v-t-sm); }
+  .rating__num { grid-row: 1 / span 2; font-family: var(--v-font-display); font-size: var(--v-t-3xl); line-height: 1; }
+  .stars { --size: 1.1rem; display: inline-block; width: calc(var(--size) * 5); height: var(--size); background: var(--brass);
+    -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z'/%3E%3C/svg%3E") 0 0 / var(--size) var(--size) repeat-x;
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M10 1.5l2.6 5.6 6.1.7-4.5 4.2 1.2 6L10 15l-5.4 3 1.2-6L1.3 7.8l6.1-.7z'/%3E%3C/svg%3E") 0 0 / var(--size) var(--size) repeat-x; }
+  .rating a { color: var(--on-panel); display: inline-block; padding-block: .55em; }
+  .quotes { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: var(--v-7); align-items: start; }
+  .quote { padding-top: var(--v-5); border-top: 1px solid var(--brass); }
+  .quote blockquote { margin: 0; line-height: 1.55; letter-spacing: .005em; text-wrap: pretty; }
+  .quote--main blockquote { font-family: var(--v-font-display); font-size: var(--v-t-xl); line-height: 1.25; }
+  .quote figcaption { margin-top: var(--v-4); font-size: var(--v-t-sm); color: var(--v-ink-soft); }
+  @media (max-width: 860px) {
+    .quotes { grid-template-columns: 1fr; gap: var(--v-6); }
+    .reviews__head { grid-template-columns: 1fr; align-items: start; margin-bottom: var(--v-6); }
+    .rating__num { font-size: var(--v-t-2xl); }
+  }
+
+  /* ---- акт 7 · запись: финал держит реплику ----------------------------------- */
+  .close { height: 100%; display: grid; grid-template-rows: 1fr auto; padding: 0 var(--v-gutter);
+    background: radial-gradient(60rem 40rem at calc(var(--v-mx, .5) * 100%) calc(var(--v-my, .5) * 100%), var(--v-accent-10), transparent 60%); }
+  .close__inner { align-self: center; display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, .8fr); gap: var(--v-8); align-items: end; padding-top: var(--v-9); }
+  .close__inner .v-display { margin-bottom: var(--v-5); }
+  .close__inner .v-lede { max-width: 40ch; }
+  .close__cta { display: flex; flex-wrap: wrap; align-items: center; gap: var(--v-4) var(--v-6); margin-top: var(--v-6); }
+  .close__tel { font-family: var(--v-font-display); font-size: var(--v-t-xl); text-decoration: none; display: inline-flex; align-items: center; min-height: 44px; color: var(--graphite); }
+  .close__meta { display: grid; gap: var(--v-4); color: var(--steel); font-size: var(--v-t-sm); }
+  .close__meta b { color: var(--graphite); font-weight: 600; display: block; margin-bottom: .15em; }
+  .close__meta a { color: var(--graphite); display: inline-flex; align-items: center; min-height: 44px; text-decoration-color: var(--brass); }
+  .foot { display: flex; justify-content: space-between; gap: var(--v-4); padding: var(--v-6) 0; border-top: 1px solid var(--line); font-size: var(--v-t-xs); color: var(--steel); flex-wrap: wrap; }
+  .foot__mark { font-family: var(--v-font-display); font-size: 1.2rem; color: var(--graphite); letter-spacing: .02em; }
+  @media (max-width: 860px) {
+    .close { padding-bottom: calc(4.5rem + env(safe-area-inset-bottom)); } /* футер не под нижней панелью */
+    .close__inner { grid-template-columns: 1fr; gap: var(--v-5); padding-top: var(--v-8); align-items: start; }
+    .close__tel { font-size: var(--v-t-lg); }
+    .foot { font-size: .95rem; }
+  }
+</style>
+</head>
+<body>
+<div class="v-page">
+  <span data-v-progress></span>
+
+  <header class="bar">
+    <a class="bar__mark" href="#top"><img src="assets/maxstyle-mark.svg" alt="" width="30" height="30">MaxStyle</a>
+    <nav class="nav" aria-label="Разделы">
+      <a href="#tehniki">Техники</a>
+      <a href="#ceny">Прайс</a>
+      <a href="#master">О мастере</a>
+      <a href="#otzyvy">Отзывы</a>
+      <a href="cvetotip.html">Цветотип</a>
+      <a href="#zapis">Контакты</a>
+    </nav>
+    <div class="bar__right">
+      <a class="bar__tel" href="tel:+79257111211">+7 (925) 711-12-11</a>
+      <a class="v-btn" href="https://widget.sonline.su/ru/services/?placeid=655344472" target="_blank" rel="noopener">Записаться онлайн</a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- 1 · УЗНАВАНИЕ: три шага записи поверх кадра рабочего места, оффер держится всегда -->
+    <section id="top" data-v-act="pin" data-v-span="2.8" data-v-drift="#ECECE8" aria-label="MaxStyle – стрижка и окрашивание">
+      <div data-v-stage class="hero">
+        <div class="hero__photo">
+          <div class="v-layer hero__zoom">
+            <picture>
+              <source media="(max-width: 860px)" srcset="assets/hero-v-m.webp">
+              <img src="assets/hero-v.webp" alt="" width="1920" height="1080" fetchpriority="high">
+            </picture>
+          </div>
+        </div>
+        <div class="hero__wash" aria-hidden="true"></div>
+        <div class="v-scrim v-scrim--band" aria-hidden="true"></div>
+
+        <div class="steps" aria-label="Как проходит запись">
+          <ol class="steps__dots" aria-hidden="true">
+            <li style="--a: 0; --b: .35">1</li>
+            <li style="--a: .34; --b: .67">2</li>
+            <li style="--a: .66; --b: 1">3</li>
+          </ol>
+          <div class="steps__slot">
+            <div class="step" data-v-cue="0 0.34 0 0.05" data-v-rise="10"><p data-v-kinetic="words">Выбрали свободное окно онлайн – без звонков и переписки</p></div>
+            <div class="step" data-v-cue="0.34 0.66 0.05 0.05" data-v-rise="10"><p data-v-kinetic="words">Пришли после работы: в будни принимаю до 21:00</p></div>
+            <div class="step" data-v-cue="0.66 1 0.05 0" data-v-rise="10"><p data-v-kinetic="words">Договорились о цвете и цене до начала работы</p></div>
+          </div>
+        </div>
+
+        <div class="v-copy hero__offer" data-v-cue="0 1 0 0" data-v-rise="0">
+          <h1 class="v-display">Стрижка и окрашивание в Москве: свой мастер на годы</h1>
+          <p class="v-lede">Airtouch, балаяж, завивка, наращивание. Кабинет в&nbsp;250&nbsp;м от «Окружной», запись онлайн в&nbsp;будни до&nbsp;21:00.</p>
+          <div class="hero__cta">
+            <a class="v-btn" href="https://widget.sonline.su/ru/services/?placeid=655344472" target="_blank" rel="noopener">Записаться онлайн</a>
+            <a class="hero__tel" href="tel:+79257111211">или позвоните <b>+7 (925) 711-12-11</b></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2 · ЦЕНА БЕЗДЕЙСТВИЯ и ПОВОРОТ: страшно сменить мастера ради цвета -->
+    <section class="v-section v-section--tight" data-v-act="flow" data-v-drift="#F7F7F4" id="strah" aria-label="Почему страшно менять мастера">
+      <div class="v-wrap">
+        <div class="fear__head" data-v-in data-v-stagger="70">
+          <h2 class="v-display v-display--lg">Менять мастера страшно, особенно ради цвета</h2>
+        </div>
+        <div class="fear__grid">
+          <figure class="fear__fig" data-v-reveal="left" data-v-reveal-at="0.22 0.55">
+            <img src="assets/color.webp" srcset="assets/color-800.webp 800w, assets/color.webp 1400w" sizes="(max-width: 860px) 100vw, 36rem" alt="Окрашивание в процессе: чаша с тонером, кисть и пряди в фольге" width="1400" height="1050" loading="lazy" decoding="async">
+            <figcaption class="illu">Иллюстрация</figcaption>
+          </figure>
+          <div>
+            <ul class="rows" data-v-in data-v-stagger="80">
+              <li><h3>Цвет не как на фото</h3><p>Показали картинку, а вышло желтее, темнее или с полосой на границе. Переделывать – ещё раз платить и ещё раз рисковать волосами.</p></li>
+              <li><h3>Цену называют уже в кресле</h3><p>«У вас густые», «длина больше», «нужен уход» – и итог выше, чем вы рассчитывали, когда спорить неловко.</p></li>
+              <li><h3>Свободно только днём в будни</h3><p>Хороший мастер занят, а окна остаются на время, когда вы на работе.</p></li>
+            </ul>
+            <div class="turn" data-v-in data-v-in-self>
+              <p class="turn__text">Перед окрашиванием – <b>консультация</b>: смотрю волосы, договариваемся о результате, и цену я называю <b>до начала работы</b>. Свободные окна видны в онлайн-записи, в будни – до 21:00.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3 · ВЫБОР: три техники встык, кадр сменяется (кадры – иллюстрации, не работы мастера) -->
+    <section id="tehniki" data-v-act="pin" data-v-span="2.4" data-v-drift="#ECECE8" aria-label="Техники">
+      <div data-v-stage>
+        <div class="tech">
+          <div class="tech__head" data-v-cue="0 1 0 0" data-v-rise="0">
+            <h2 class="v-display v-display--md">С чем приходят</h2>
+            <ol class="tech__index" aria-hidden="true">
+              <li style="--a: 0; --b: .35">1</li>
+              <li style="--a: .34; --b: .69">2</li>
+              <li style="--a: .68; --b: 1">3</li>
+            </ol>
+          </div>
+          <div class="tech__body">
+            <div class="tech__copy">
+              <article class="tech__one" data-v-cue="0 0.36 0 0.06">
+                <h3>Стрижка</h3>
+                <p>Простая, модельная или «умная» – по вашим волосам и по тому, как вы их носите каждый день.</p>
+                <ul class="tech__list">
+                  <li><span>Простая стрижка</span><span class="price">от 1 500 ₽</span></li>
+                  <li><span>Модельная стрижка</span><span class="price">от 2 400 ₽</span></li>
+                  <li><span>«Умная» стрижка</span><span class="price">от 3 600 ₽</span></li>
+                </ul>
+                <div class="tech__cta"><a class="v-btn" href="https://widget.sonline.su/ru/services/?placeid=655344472" target="_blank" rel="noopener">Записаться онлайн</a></div>
+              </article>
+              <article class="tech__one" data-v-cue="0.34 0.7 0.06 0.06">
+                <h3>Airtouch, балаяж, омбре</h3>
+                <p>Мягкий переход от корней к длине. Перед работой – консультация: результат и цену обсуждаем до начала.</p>
+                <ul class="tech__list">
+                  <li><span>Окрашивание корней</span><span class="price">5 400–9 400 ₽</span></li>
+                  <li><span>Колорирование, мелирование</span><span class="price">12 000–24 000 ₽</span></li>
+                  <li><span>Сложное окрашивание</span><span class="price">24 000–36 000 ₽</span></li>
+                </ul>
+                <div class="tech__cta"><a class="v-btn" href="https://widget.sonline.su/ru/services/?placeid=655344472" target="_blank" rel="noopener">Записаться онлайн</a></div>
+              </article>
+              <article class="tech__one" data-v-cue="0.68 1 0.06 0">
+                <h3>Завивка и наращивание</h3>
+                <p>Классическая, вертикальная, частичная завивка и карвинг. Волосы для наращивания я не продаю – помогаю выбрать на консультации.</p>
+                <ul class="tech__list">
+                  <li><span>Химическая завивка</span><span class="price">5 400–15 000 ₽</span></li>
+                  <li><span>Наращивание, 125 прядей</span><span class="price">от 20 000 ₽</span></li>
+                </ul>
+                <div class="tech__cta"><a class="v-btn" href="https://widget.sonline.su/ru/services/?placeid=655344472" target="_blank" rel="noopener">Записаться онлайн</a></div>
+              </article>
+            </div>
+            <div class="tech__fig">
+              <figure data-v-cue="0 0.36 0 0.06" data-v-rise="0">
+                <img src="assets/tech-cut.webp" srcset="assets/tech-cut-480.webp 480w, assets/tech-cut.webp 900w" sizes="(max-width: 860px) 100vw, 30rem" alt="Стрижка-боб до ключиц, вид сзади" width="900" height="1200" loading="lazy" decoding="async">
+                <figcaption class="illu">Иллюстрация техники</figcaption>
+              </figure>
+              <figure data-v-cue="0.34 0.7 0.06 0.06" data-v-rise="0">
+                <img src="assets/tech-color.webp" srcset="assets/tech-color-480.webp 480w, assets/tech-color.webp 900w" sizes="(max-width: 860px) 100vw, 30rem" alt="Длинные волосы с мягким переходом от тёмных корней к бежевому блонду" width="900" height="1200" loading="lazy" decoding="async">
+                <figcaption class="illu">Иллюстрация техники</figcaption>
+              </figure>
+              <figure data-v-cue="0.68 1 0.06 0" data-v-rise="0">
+                <img src="assets/tech-wave.webp" srcset="assets/tech-wave-480.webp 480w, assets/tech-wave.webp 900w" sizes="(max-width: 860px) 100vw, 30rem" alt="Волосы до плеч с мягкими волнами после завивки" width="900" height="1200" loading="lazy" decoding="async">
+                <figcaption class="illu">Иллюстрация техники</figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4 · ВЫБОР: полный прайс -->
+    <section class="v-section" data-v-act="flow" data-v-drift="#F7F7F4" id="ceny" aria-label="Прайс">
+      <div class="v-wrap prices">
+        <div>
+          <div class="prices__head" data-v-in data-v-stagger="60">
+            <h2 class="v-display v-display--lg">Прайс</h2>
+            <p class="v-body v-soft">Цена окрашивания и завивки зависит от длины и густоты волос. Точную сумму называю на консультации, до начала работы.</p>
+          </div>
+          <div class="pgroup" data-v-in data-v-stagger="50">
+            <h3>Стрижки</h3>
+            <ul class="plist">
+              <li><span class="name">Простая стрижка</span><span class="price">от 1 500 ₽</span></li>
+              <li><span class="name">Модельная стрижка</span><span class="price">от 2 400 ₽</span></li>
+              <li><span class="name">«Умная» стрижка</span><span class="price">от 3 600 ₽</span></li>
+            </ul>
+          </div>
+          <div class="pgroup" data-v-in data-v-stagger="50">
+            <h3>Окрашивание</h3>
+            <ul class="plist">
+              <li><span class="name">Окрашивание корней</span><span class="price">5 400–9 400 ₽</span></li>
+              <li><span class="name">Колорирование, мелирование</span><span class="price">12 000–24 000 ₽</span></li>
+              <li><span class="name">Сложное окрашивание: Airtouch, балаяж, омбре</span><span class="price">24 000–36 000 ₽</span></li>
+            </ul>
+          </div>
+          <div class="pgroup" data-v-in data-v-stagger="50">
+            <h3>Химическая завивка <small>зависит от густоты волос</small></h3>
+            <ul class="plist">
+              <li><span class="name">Классическая</span><span class="price">5 400–12 000 ₽</span></li>
+              <li><span class="name">Вертикальная</span><span class="price">8 000–15 000 ₽</span></li>
+              <li><span class="name">Частичная</span><span class="price">6 000–10 000 ₽</span></li>
+              <li><span class="name">Карвинг</span><span class="price">12 000–15 000 ₽</span></li>
+            </ul>
+          </div>
+          <div class="pgroup" data-v-in data-v-stagger="50">
+            <h3>Наращивание и уход</h3>
+            <ul class="plist">
+              <li><span class="name">Наращивание волос, 125 прядей</span><span class="price">от 20 000 ₽</span><span class="note">Волосы я не продаю – помогаю выбрать на консультации.</span></li>
+              <li><span class="name">Уход и лечение волос и кожи головы</span><span class="price">4 000–18 000 ₽</span><span class="note">Цена зависит от процедуры.</span></li>
+            </ul>
+          </div>
+        </div>
+        <aside class="prices__aside" data-v-in data-v-in-self>
+          <div class="incl" data-v-tilt="4">
+            <h3>Как считается цена</h3>
+            <ul>
+              <li><b>Консультация до начала</b><span>Смотрю волосы и называю точную сумму до того, как взять кисть.</span></li>
+              <li><b>Длина и густота</b><span>От них зависит цена окрашивания и завивки – поэтому в прайсе вилка.</span></li>
+              <li><b>Оплата</b><span>Картой, по QR-коду, переводом или наличными.</span></li>
+            </ul>
+            <a class="incl__link" href="cvetotip.html">Какой оттенок вам идёт – по цветотипу</a>
+            <a class="v-btn" href="https://widget.sonline.su/ru/services/?placeid=655344472" target="_blank" rel="noopener">Записаться онлайн</a>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- 5 · ДОКАЗАТЕЛЬСТВО: мастер и кабинет, настоящее фото -->
+    <section class="v-section" data-v-act="flow" data-v-drift="#ECECE8" id="master" aria-label="О мастере">
+      <div class="v-wrap about">
+        <figure class="about__fig">
+          <div class="v-layer" data-v-parallax="0.3">
+            <img src="assets/maxim.webp" alt="Парикмахер-стилист Максим Смоляков" width="2000" height="1116" loading="lazy" decoding="async">
+          </div>
+        </figure>
+        <div class="about__text" data-v-in data-v-stagger="70">
+          <h2 class="v-display v-display--md">Меня зовут Максим, я парикмахер-стилист</h2>
+          <p>Стригу, делаю сложное окрашивание, Airtouch, завивку и наращивание в своём кабинете у метро «Окружная». Работаю сам – от консультации до укладки.</p>
+          <dl class="facts">
+            <div><dt>Метро</dt><dd>«Окружная» и МЦД «Окружная» – 250 м пешком</dd></div>
+            <div><dt>На машине</dt><dd>Есть парковка, в том числе для людей с инвалидностью</dd></div>
+            <div><dt>В здании</dt><dd>Гостиница «Восток», 2 этаж, кабинет 235. Есть лифт и Wi-Fi</dd></div>
+            <div><dt>Приём</dt><dd>По записи: пн–пт 10:00–21:00, сб 10:00–19:00, вс – выходной</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6 · ДОВЕРИЕ: отзывы с Яндекс Карт, без имён клиентов -->
+    <section class="v-section reviews-sec" data-v-act="flow" id="otzyvy" aria-label="Отзывы с Яндекс Карт">
+      <div class="v-wrap">
+        <div class="reviews__head" data-v-in data-v-stagger="60">
+          <div>
+            <h2 class="v-display v-display--md">Что пишут на Яндекс Картах</h2>
+          </div>
+          <div class="rating">
+            <span class="rating__num v-nums">5,0</span>
+            <span class="stars" role="img" aria-label="рейтинг 5 из 5"></span>
+            <span><span class="v-soft">125 оценок, 102 отзыва</span> · <a href="https://yandex.ru/maps/org/maxstyle/148404020570/reviews/" target="_blank" rel="noopener">читать все</a></span>
+          </div>
+        </div>
+        <div class="quotes" data-v-in data-v-stagger="90">
+          <figure class="quote quote--main">
+            <blockquote>«Стригусь у него без малого уже 17 лет. Максим всегда точно понимает, что должно получиться в результате.»</blockquote>
+            <figcaption>Отзыв о стрижке</figcaption>
+          </figure>
+          <figure class="quote">
+            <blockquote>«Сложное окрашивание, стрижка, укладка – всё великолепно.»</blockquote>
+            <figcaption>Отзыв об окрашивании</figcaption>
+          </figure>
+          <figure class="quote">
+            <blockquote>«Всё держится отлично, выглядит естественно.»</blockquote>
+            <figcaption>Отзыв о завивке и наращивании</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7 · ДЕЙСТВИЕ: запись -->
+    <section data-v-act="pin" data-v-span="1.3" data-v-drift="#ECECE8" id="zapis" aria-label="Записаться">
+      <div data-v-stage>
+        <div class="close" data-v-spotlight>
+          <div class="close__inner">
+            <div data-v-cue="0.04">
+              <h2 class="v-display v-display--lg">Выберите удобное окно</h2>
+              <p class="v-lede">В онлайн-записи видны свободные окна: выберите услугу и время. Не&nbsp;любите онлайн&nbsp;– позвоните.</p>
+              <div class="close__cta">
+                <a class="v-btn" href="https://widget.sonline.su/ru/services/?placeid=655344472" target="_blank" rel="noopener" data-v-magnet="0.22" data-v-rise="0">Записаться онлайн</a>
+                <a class="close__tel" href="tel:+79257111211">+7 (925) 711-12-11</a>
+              </div>
+            </div>
+            <div class="close__meta" data-v-cue="0.1">
+              <span><b>Часы работы</b>пн–пт 10:00–21:00, сб 10:00–19:00, вс – выходной</span>
+              <span><b>Адрес</b>Москва, Гостиничная ул., 9А, корп. 3, гостиница «Восток», 2 этаж, каб. 235</span>
+              <span><b>Как добраться</b><a href="https://yandex.ru/maps/org/maxstyle/148404020570/" target="_blank" rel="noopener">MaxStyle на Яндекс Картах</a></span>
+            </div>
+          </div>
+          <footer class="foot">
+            <span class="foot__mark">MaxStyle</span>
+            <span>Стрижки, окрашивание, завивка, наращивание – по записи</span>
+            <span>© 2026 Максим Смоляков</span>
+          </footer>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div class="dock">
+    <a class="v-btn" href="https://widget.sonline.su/ru/services/?placeid=655344472" target="_blank" rel="noopener">Записаться онлайн</a>
+    <a class="dock__tel" href="tel:+79257111211" aria-label="Позвонить: +7 (925) 711-12-11">Позвонить</a>
+  </div>
+</div>
+
+<script src="vibe.js"></script>
+<script>
+  // На телефоне пины короче: правим атрибут до монтирования.
+  if (window.matchMedia('(max-width: 860px)').matches) {
+    document.getElementById('top').setAttribute('data-v-span', '2.5');
+    document.getElementById('tehniki').setAttribute('data-v-span', '2.2');
+  }
+  Vibe.mount(document.querySelector('.v-page'));
+
+  // Шапка: подложка после 40 px прокрутки; активный пункт меню – раздел, который пересекает линию на 40 % высоты экрана.
+  (function () {
+    var bar = document.querySelector('.bar'), on = null, cur = null;
+    var links = [].slice.call(document.querySelectorAll('.nav a[href^="#"]'));
+    var secs = links.map(function (a) { return document.querySelector(a.getAttribute('href')); });
+    function tick() {
+      var s = window.scrollY > 40; if (s !== on) { on = s; bar.classList.toggle('is-scrolled', s); }
+      var line = window.innerHeight * 0.4, hit = -1;
+      secs.forEach(function (el, i) { var r = el.getBoundingClientRect(); if (r.top <= line && r.bottom > line) hit = i; });
+      if (hit !== cur) { cur = hit; links.forEach(function (a, i) { a.classList.toggle('is-on', i === hit); if (i === hit) a.setAttribute('aria-current', 'true'); else a.removeAttribute('aria-current'); }); }
+    }
+    window.addEventListener('scroll', tick, { passive: true }); window.addEventListener('resize', tick); tick();
+  })();
+</script>
+</body>
+</html>
